@@ -7,15 +7,6 @@ import { FaUserAlt, FaBook } from "react-icons/fa";
 // Navigation bar component
 
 const Navigation = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  // //Logout function
-  // const onLogout = () => {
-  //   dispatch(logout()); //Logs user out
-  //   dispatch(reset()); //Resets state
-  //   navigate("/"); //Navigates to login page
-  // };
 
   // Global user state
   const { user } = useSelector((state) => state.auth);
@@ -53,7 +44,7 @@ const Navigation = () => {
           </Link>
 
           <Link to="/Profile">
-          <button>
+          <button className="navbar--register">
             <FaUserAlt style={{ marginRight: ".25rem" }} />
             {user.name}
           </button>

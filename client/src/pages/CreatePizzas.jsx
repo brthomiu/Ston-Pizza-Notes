@@ -67,12 +67,7 @@ const CreatePizzas = () => {
   return (
     <div>
       <div>
-        <h2>Welcome to Stön Pizza Notes v0.12a</h2>
-        <br></br>
-        <>
-          Select Create Pizza to publish a new recipe, or Browse to view
-          recipes.
-        </>
+        <h2>New Recipe</h2>
         <br></br>
       </div>
       <section className="form">
@@ -98,7 +93,7 @@ const CreatePizzas = () => {
               id="ingredients"
               name="ingredients"
               value={ingredients}
-              placeholder="Enter ingredients."
+              placeholder="Enter ingredients separated by commas."
               onChange={onChange}
             ></textarea>
           </div>
@@ -118,7 +113,7 @@ const CreatePizzas = () => {
           </div>
           <div className="form-group">
             <button type="submit" className="login--button">
-              Submit
+              Create Recipe
             </button>
           </div>
         </form>

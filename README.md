@@ -1,8 +1,8 @@
-<img src="/client/src/assets/stonHeader.png" alt="Ston Pizza Notes">
+<img src="/client/src/assets/stonHeader.png" alt="Ston Recipe Notes">
 
-### An app for pizza chefs.
+### A platform for cooks and chefs.
 
-Stön (stəʊn) is a platform built to help home cooks and chefs develop better pizzas.
+Stön (stəʊn) is a platform built to help home cooks and chefs develop better recipes.
 
 ---
 
