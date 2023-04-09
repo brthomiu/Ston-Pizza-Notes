@@ -40,15 +40,11 @@ Axios is used to make API fetch requests to the backend.
 
 # Developer notes
 
-## Current version - 0.12a - 4/8/2023
+## Current version - 0.14a - 4/9/2023
 
 ---
 
 ## Upcoming features - to be implemented soon
-
-- Add pagination for ingredient tags inside the modal
-
-- Clicking outside of modals should close them
 
 - Add character limits for all input fields
 
@@ -60,24 +56,17 @@ Axios is used to make API fetch requests to the backend.
 
 - Email account verification for new accounts
 
-- Fix the ingredient parsing to allow ingredients with multi-word names
-
-  - Split words off into tags after two spaces OR a comma and a space
-
 - Sort and search for browsing recipes
-
   - Search by name/user/ingredient
   - Sort by rating
   - Show my recipes
 
 - Rating system
-
   - 1-5 star system
   - Save name/ID of recipe and rating in user data
     - (single array of objects that correspond to rated recipe)
 
 - Settings page
-
   - Input to edit user profile
   - Delete account
 

@@ -1,9 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { logout, reset } from "../features/auth/authSlice";
 import "./styles.css";
 import logo from "../assets/stonHeader.svg";
-import { FaUserAlt, FaBook, FaCaretSquareLeft } from "react-icons/fa";
+import { FaUserAlt, FaBook } from "react-icons/fa";
 
 // Navigation bar component
 
@@ -11,12 +10,12 @@ const Navigation = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  //Logout function
-  const onLogout = () => {
-    dispatch(logout()); //Logs user out
-    dispatch(reset()); //Resets state
-    navigate("/"); //Navigates to login page
-  };
+  // //Logout function
+  // const onLogout = () => {
+  //   dispatch(logout()); //Logs user out
+  //   dispatch(reset()); //Resets state
+  //   navigate("/"); //Navigates to login page
+  // };
 
   // Global user state
   const { user } = useSelector((state) => state.auth);
@@ -52,10 +51,7 @@ const Navigation = () => {
               Recipes
             </button>
           </Link>
-          <button className="navbar--logout" onClick={onLogout}>
-            <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
-            Logout
-          </button>
+
           <Link to="/Profile">
           <button>
             <FaUserAlt style={{ marginRight: ".25rem" }} />
