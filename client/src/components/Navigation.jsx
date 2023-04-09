@@ -46,11 +46,8 @@ const Navigation = () => {
           <Link to="/Home">
             <button>Home</button>
           </Link>
-          <Link to="/CreatePizzas">
-            <button>Create Pizza</button>
-          </Link>
           <Link to="/ViewPizzas">
-            <button>Browse</button>
+            <button>Recipes</button>
           </Link>
           <button onClick={onLogout}>Logout</button>
         </nav>
