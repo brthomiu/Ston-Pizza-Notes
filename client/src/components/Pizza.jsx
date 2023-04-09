@@ -45,7 +45,7 @@ const Pizza = (props) => {
   const deletePizza = (pizzaId, refresh, setRefresh) => {
     axios({
       method: "DELETE",
-      url: `http://localhost:8000/api/pizzas/${pizzaId}`,
+      url: `/api/pizzas/${pizzaId}`,
     })
       .catch((error) => {
         throw new Error(`Axios error:${error}`);

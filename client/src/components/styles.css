@@ -30,7 +30,7 @@
 /* Modal Styles */
 
 .modal--bg {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   left: 0;
   top: 0;
@@ -106,7 +106,7 @@
   font-weight: 700;
   font-size: x-large;
   right: 1rem;
-  top: 1rem;
+  top: 3rem;
   padding: 0.5rem 1.2rem;
   border-radius: 1rem;
   position: fixed;
@@ -288,7 +288,7 @@
     width: 18rem;
   }
   .navbar {
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
   }
   .navbar button {
