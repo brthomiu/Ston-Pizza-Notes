@@ -172,10 +172,12 @@
 
 .deleteButton {
   background-color: rgb(210, 72, 70);
+  cursor: pointer;
 }
 
 .deleteButton:hover {
   background-color: rgb(230, 90, 90);
+  cursor: pointer;
 }
 
 .deleteButton:not(:hover) {

@@ -82,6 +82,7 @@ const Modal = (props) => {
                 <button
                   className="deleteButton"
                   onClick={() => confirmDelete()}
+                  onTouchStart={() => confirmDelete()}
                 >
                   Delete Pizza
                 </button>
@@ -102,6 +103,12 @@ const Modal = (props) => {
               setShowConfirmation={setShowConfirmation}
             />
             <div className="modal--container">
+            <button onClick={() => confirmDelete()} className="modal--mobile-x">
+              <BsTrashFill />
+            </button>
+            <button onClick={() => closeModal()} className="modal--mobile-back">
+              <BsXLg />
+            </button>
               <span className="modal--title">
                 <h1>{props.pizzaName}</h1>
               </span>
