@@ -1,9 +1,3 @@
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .containerButton {
   width: 16rem;
   margin-bottom: 2.5rem;
