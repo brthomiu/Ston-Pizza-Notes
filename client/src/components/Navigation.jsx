@@ -28,9 +28,6 @@ const Navigation = () => {
           <Link to="/About">
             <button>About</button>
           </Link>
-          <Link to="/ViewPizzas">
-            <button>Browse</button>
-          </Link>
           <Link to="/">
             <button>Login</button>
           </Link>
