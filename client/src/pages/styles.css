@@ -90,17 +90,24 @@
 
   .form {
     width: 18rem;
+    margin: auto;
   }
 
   .pizzaName--form-control {
     width: 18rem;
+    margin: auto;
+
   }
 
   .ingredients--form-control {
     width: 18rem;
+    margin: auto;
+
   }
 
   .recipe--form-control {
     width: 18rem;
+    margin: auto;
+
   }
 }

@@ -67,7 +67,7 @@
   font-weight: 600;
   background-color: rgba(235, 185, 130, 0.8);
   padding: 0.20rem 0.3rem;
-  border-radius: .5rem;
+  border-radius: 1rem;
   cursor: default;
   box-shadow: -0.25rem 0.35rem rgba(0, 0, 0, 0.5);
 }
@@ -336,7 +336,7 @@
   .modal--ingredient {
     margin: 0;
     font-size: small;
-    padding: 0.1rem;
+    padding: 0.15rem;
   }
 
   .modal--mobile-x {
