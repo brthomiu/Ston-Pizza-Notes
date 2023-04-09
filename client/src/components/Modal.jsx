@@ -4,6 +4,7 @@ import ConfirmDelete from "./ConfirmDelete";
 import "./styles.css";
 import { useSelector } from "react-redux";
 import IngredientCloud from "./IngredientCloud";
+import {BsTrashFill, BsXLg} from 'react-icons/bs'
 
 const Modal = (props) => {
   //State for delete confirmation dialog
@@ -29,8 +30,8 @@ const Modal = (props) => {
         <div className="modal--bg">
           <div className="modal--container">
 
-            <button onClick={() => closeModal()} className="modal--mobile-back">
-              {"<"}
+          <button onClick={() => closeModal()} className="modal--mobile-back">
+              <BsXLg />
             </button>
             <span className="modal--title">
               <h1>{props.pizzaName}</h1>
@@ -59,10 +60,10 @@ const Modal = (props) => {
           <div className="modal--bg">
             <div className="modal--container">
             <button onClick={() => confirmDelete()} className="modal--mobile-x">
-              X
+              <BsTrashFill />
             </button>
             <button onClick={() => closeModal()} className="modal--mobile-back">
-              {"<"}
+              <BsXLg />
             </button>
               <span className="modal--title">
                 <h1>{props.pizzaName}</h1>
