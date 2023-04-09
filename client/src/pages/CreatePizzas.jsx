@@ -112,11 +112,9 @@ const CreatePizzas = () => {
             ></textarea>
           </div>
           <div className="form-group">
-            <Link to="/Recipes">
             <button type="submit" className="login--button">
-              Create Recipe
+              <Link to="/Recipes">Create Recipe</Link>
             </button>
-            </Link>
           </div>
         </form>
       </section>
