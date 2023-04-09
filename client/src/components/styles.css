@@ -269,7 +269,10 @@
 @media screen and (max-width: 600px) {
   .navbar {
     justify-content: center;
-    gap: 1rem;
+    gap: .75rem;
+  }
+  .navbar button {
+    padding: 0.3rem;
   }
   .modal--container {
     position: relative;
