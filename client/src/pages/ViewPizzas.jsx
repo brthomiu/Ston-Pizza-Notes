@@ -50,7 +50,7 @@ const ViewPizzas = () => {
     return <Spinner />;
   } else {
     return (
-      <div className="container">
+      <div>
         <Link to="/CreatePizzas">
           <button className="containerButton">New Recipe</button>
         </Link>

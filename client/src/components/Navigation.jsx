@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../features/auth/authSlice";
 import "./styles.css";
 import logo from "../assets/stonHeader.svg";
+import { FaUserAlt, FaBook, FaCaretSquareLeft } from "react-icons/fa";
+
 
 // Navigation bar component
 
@@ -26,13 +28,10 @@ const Navigation = () => {
       <>
         <nav className="navbar">
           <Link to="/About">
-            <button>About</button>
+            <button><FaBook style={{marginRight:'.25rem'}} /> About</button>
           </Link>
           <Link to="/">
-            <button>Login</button>
-          </Link>
-          <Link to="/Register">
-            <button>Register</button>
+            <button className="navbar--register" ><FaUserAlt style={{marginRight:'.25rem'}} />Login</button>
           </Link>
         </nav>
         <img className="navbar--logo" src={logo} alt="Logo" />
@@ -44,12 +43,12 @@ const Navigation = () => {
       <>
         <nav className="navbar">
           <Link to="/Home">
-            <button>Home</button>
+            <button><FaUserAlt style={{marginRight:'.25rem'}} />{user.name}</button>
           </Link>
           <Link to="/ViewPizzas">
-            <button>Recipes</button>
+            <button><FaBook style={{marginRight:'.25rem'}} />Recipes</button>
           </Link>
-          <button onClick={onLogout}>Logout</button>
+          <button className="navbar--logout" onClick={onLogout}><FaCaretSquareLeft style={{marginRight:'.25rem'}} />Logout</button>
         </nav>
         <img className="navbar--logo" src={logo} alt="Logo" />
       </>

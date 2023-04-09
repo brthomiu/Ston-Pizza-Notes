@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
-import "./styles.css"
+import "./styles.css";
+import { FaUserAlt } from "react-icons/fa";
 
 const Login = () => {
   // Local state for email and password entry forms
@@ -31,7 +32,7 @@ const Login = () => {
     }
     // If login is successful or user is already logged in, navigates to the home page
     if (isSuccess || user) {
-      navigate("/home");
+      navigate("/ViewPizzas");
     }
     // Reset state
     dispatch(reset());
@@ -93,8 +94,17 @@ const Login = () => {
 
           <div className="form-group">
             <button type="submit" className="login--button">
-              Submit
+              Login
             </button>
+          </div>
+
+          <div className="form-group">
+            <Link to="/Register">
+              <button className="login--button-blue">
+                <FaUserAlt style={{marginRight:'.25rem'}} />
+                Register
+              </button>
+            </Link>
           </div>
         </form>
       </section>

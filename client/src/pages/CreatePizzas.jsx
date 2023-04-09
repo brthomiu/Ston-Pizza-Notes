@@ -51,7 +51,7 @@ const CreatePizzas = () => {
     const pizzaData = {
       owner: userName,
       pizzaName,
-      ingredients: ingredients.split(/([ ][ ]|[,])/),
+      ingredients: ingredients.split(/([ ][ ]|[,])/).toLowerCase,
       recipe,
     };
 
@@ -66,6 +66,15 @@ const CreatePizzas = () => {
   // Otherwise return pizza creation section
   return (
     <div>
+      <div>
+        <h2>Welcome to Stön Pizza Notes v0.12a</h2>
+        <br></br>
+        <>
+          Select Create Pizza to publish a new recipe, or Browse to view
+          recipes.
+        </>
+        <br></br>
+      </div>
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">

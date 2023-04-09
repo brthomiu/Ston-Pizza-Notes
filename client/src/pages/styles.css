@@ -11,6 +11,14 @@
 
 /* Input Form Styles */
 
+
+/* .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+} */
+
 .login--form-control {
   padding: 0.5rem;
   width: 18rem;
@@ -42,6 +50,18 @@
 .login--button {
   margin-top: 1rem;
   width: 19.25rem;
+}
+
+.login--button-blue {
+  margin-top: 1rem;
+  width: 19.25rem;
+  background-color: rgb(29 161 242);
+}
+
+.login--button-blue:hover {
+  margin-top: 1rem;
+  width: 19.25rem;
+  background-color: rgb(39 172 255);
 }
 
 /* View Pizza Page Styles */

@@ -14,6 +14,19 @@
   box-shadow: -0.4rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 
+.navbar--register {
+  background-color: rgb(29 161 242);
+}
+.navbar--register:hover {
+  background-color: rgb(39 172 255);
+}
+.navbar--logout {
+  background-color: rgb(210, 72, 70);
+}
+.navbar--logout:hover {
+  background-color: rgb(230, 90, 90)
+}
+
 /* Modal Styles */
 
 .modal--bg {
@@ -272,10 +285,10 @@
   }
   .navbar {
     justify-content: center;
-    gap: .75rem;
+    gap: 1rem;
   }
   .navbar button {
-    padding: 0.3rem;
+    padding: 0.5rem;
   }
   .modal--container {
     position: relative;
