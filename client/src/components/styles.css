@@ -267,6 +267,10 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .pizza {
+    width: 20rem;
+  }
   .navbar {
     justify-content: center;
     gap: .75rem;
