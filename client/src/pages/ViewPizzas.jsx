@@ -4,18 +4,18 @@ import { useSelector } from "react-redux";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 import "./styles.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const ViewPizzas = () => {
   // Local state to store pizza data fetched from backend
   const [pizzaList, setPizzaList] = useState([]);
   const [refresh, setRefresh] = useState(false);
 
- // Global state form redux store
+  // Global state form redux store
   const { pizza, isError, isLoading } = useSelector((state) => state.pizza);
-  const { user } = useSelector((state) => state.auth)
+  const { user } = useSelector((state) => state.auth);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // Hook to kick you back to login if you aren't authenticated
   useEffect(() => {
@@ -51,6 +51,9 @@ const ViewPizzas = () => {
   } else {
     return (
       <div className="container">
+        <Link to="/CreatePizzas">
+          <button>Create Pizza</button>
+        </Link>
         <div className="pizzas--Box">
           {pizzaList.map((pizza) => (
             <div>
