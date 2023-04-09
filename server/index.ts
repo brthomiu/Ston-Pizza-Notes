@@ -15,7 +15,7 @@ app.use(cors({
     origin: '*'
 }));
 
-// Middleware for handling JSON requests, called before router
+// Middleware for handling JSON requests, called before the router
 app.use(express.json());
 
 // Express router
