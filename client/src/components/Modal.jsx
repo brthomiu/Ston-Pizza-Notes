@@ -105,8 +105,8 @@ const Modal = (props) => {
                 <h1>{props.pizzaName}</h1>
               </span>
               <span className="modal--owner">
-                <h5>Made by:</h5>
-                <h3>{props.owner}</h3>
+              <p>Made by:</p>
+                <p className="modal--name">{props.owner}</p>
               </span>
               <IngredientCloud ingredients={props.ingredients} />
 

@@ -88,8 +88,8 @@
   font-weight: 700;
   font-size: x-large;
   right: 1rem;
-  top: 1rem;
-  padding: .25rem 1rem;
+  bottom: 1rem;
+  padding: .5rem 1.2rem;
   border-radius: 1rem; 
   position: fixed;
   display: none;
@@ -106,7 +106,7 @@
   font-size: x-large;
   left: 1rem;
   top: 1rem;
-  padding: .25rem 1rem;
+  padding: .5rem 1.2rem;
   border-radius: 1rem; 
   position: fixed;
   display: none;

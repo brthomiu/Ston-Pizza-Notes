@@ -1,10 +1,8 @@
-/* global document */
 import "./styles.css";
 
 const ConfirmDelete = (props) => {
   const deletePizza = () => {
     props.deletePizza(props._id, props.refresh, props.setRefresh);
-    document.body.style.overflow = "unset";
   };
 
   return (
