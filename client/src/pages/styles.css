@@ -1,7 +1,11 @@
-.container: {
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.container button {
+  width: 16rem;
 }
 
 .pizzas-container {

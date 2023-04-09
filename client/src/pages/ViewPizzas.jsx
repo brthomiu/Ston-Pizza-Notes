@@ -51,28 +51,27 @@ const ViewPizzas = () => {
   } else {
     return (
       <div className="container">
-      <div className="pizzas-container">
         <Link to="/CreatePizzas">
           <button>Create Pizza</button>
         </Link>
-        <div className="pizzas--Box">
-          {pizzaList.map((pizza) => (
-            <div>
-              <Pizza
-                refresh={refresh}
-                setRefresh={setRefresh}
-                key={pizza._id}
-                _id={pizza._id}
-                owner={pizza.owner}
-                pizzaName={pizza.pizzaName}
-                ingredients={pizza.ingredients}
-                recipe={pizza.recipe}
-              />
-            </div>
-            
-          ))}
+        <div className="pizzas-container">
+          <div className="pizzas--Box">
+            {pizzaList.map((pizza) => (
+              <div>
+                <Pizza
+                  refresh={refresh}
+                  setRefresh={setRefresh}
+                  key={pizza._id}
+                  _id={pizza._id}
+                  owner={pizza.owner}
+                  pizzaName={pizza.pizzaName}
+                  ingredients={pizza.ingredients}
+                  recipe={pizza.recipe}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     );
   }
