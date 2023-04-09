@@ -4,7 +4,7 @@ import ConfirmDelete from "./ConfirmDelete";
 import "./styles.css";
 import { useSelector } from "react-redux";
 import IngredientCloud from "./IngredientCloud";
-import {BsTrashFill, BsXLg} from 'react-icons/bs'
+import { BsTrashFill, BsXLg } from "react-icons/bs";
 
 const Modal = (props) => {
   //State for delete confirmation dialog
@@ -29,11 +29,12 @@ const Modal = (props) => {
       <>
         <div className="modal--bg">
           <div className="modal--container">
-
-          <button onClick={() => closeModal()} className="modal--mobile-back">
+            <button onClick={() => closeModal()} className="modal--mobile-back">
               <BsXLg />
             </button>
             <span className="modal--title">
+              <br></br>
+
               <h1>{props.pizzaName}</h1>
             </span>
             <span className="modal--owner">
@@ -59,13 +60,20 @@ const Modal = (props) => {
         <>
           <div className="modal--bg">
             <div className="modal--container">
-            <button onClick={() => confirmDelete()} className="modal--mobile-x">
-              <BsTrashFill />
-            </button>
-            <button onClick={() => closeModal()} className="modal--mobile-back">
-              <BsXLg />
-            </button>
+              <button
+                onClick={() => confirmDelete()}
+                className="modal--mobile-x"
+              >
+                <BsTrashFill />
+              </button>
+              <button
+                onClick={() => closeModal()}
+                className="modal--mobile-back"
+              >
+                <BsXLg />
+              </button>
               <span className="modal--title">
+                <br></br>
                 <h1>{props.pizzaName}</h1>
               </span>
               <span className="modal--owner">
@@ -103,17 +111,25 @@ const Modal = (props) => {
               setShowConfirmation={setShowConfirmation}
             />
             <div className="modal--container">
-            <button onClick={() => confirmDelete()} className="modal--mobile-x">
-              <BsTrashFill />
-            </button>
-            <button onClick={() => closeModal()} className="modal--mobile-back">
-              <BsXLg />
-            </button>
+              <button
+                onClick={() => confirmDelete()}
+                className="modal--mobile-x"
+              >
+                <BsTrashFill />
+              </button>
+              <button
+                onClick={() => closeModal()}
+                className="modal--mobile-back"
+              >
+                <BsXLg />
+              </button>
               <span className="modal--title">
+                <br></br>
+
                 <h1>{props.pizzaName}</h1>
               </span>
               <span className="modal--owner">
-              <p>Made by:</p>
+                <p>Made by:</p>
                 <p className="modal--name">{props.owner}</p>
               </span>
               <IngredientCloud ingredients={props.ingredients} />
