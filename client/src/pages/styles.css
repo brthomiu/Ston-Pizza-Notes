@@ -1,4 +1,10 @@
-.container {
+.container: {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pizzas-container {
   margin: auto;
   justify-content: center;
   display: flex;

@@ -51,6 +51,7 @@ const ViewPizzas = () => {
   } else {
     return (
       <div className="container">
+      <div className="pizzas-container">
         <Link to="/CreatePizzas">
           <button>Create Pizza</button>
         </Link>
@@ -68,8 +69,10 @@ const ViewPizzas = () => {
                 recipe={pizza.recipe}
               />
             </div>
+            
           ))}
         </div>
+      </div>
       </div>
     );
   }
