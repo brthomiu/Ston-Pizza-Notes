@@ -39,7 +39,7 @@ const CreatePizzas = () => {
   const createNewPizza = (pizzaData) => {
     dispatch(createPizza(pizzaData)); //Logs user out
     dispatch(reset()); //Resets state
-    navigate("/Create"); //Navigates to view pizzas page
+    navigate("/Recipes"); //Navigates to view pizzas page
   };
 
   // Dispatches login function with form input data
@@ -113,7 +113,7 @@ const CreatePizzas = () => {
           </div>
           <div className="form-group">
             <button type="submit" className="login--button">
-              <Link to="/Recipes">Create Recipe</Link>
+              Create Recipe
             </button>
           </div>
         </form>
