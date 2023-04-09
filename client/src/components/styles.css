@@ -57,6 +57,7 @@
   gap: 0rem 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
   max-width: 32rem;
 }
 
