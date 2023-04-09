@@ -23,6 +23,7 @@
   width: 32rem;
   height: 4rem;
   margin-bottom: 0.5rem;
+  resize: none;
 }
 
 .recipe--form-control {
@@ -30,6 +31,7 @@
   width: 32rem;
   height: 12rem;
   margin-bottom: 0.5rem;
+  resize: none;
 }
 
 .login--button {

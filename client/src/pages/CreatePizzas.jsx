@@ -44,13 +44,14 @@ const CreatePizzas = () => {
 
   // Dispatches login function with form input data
   // Throws error if passwords do not match
+  // (/(?:,| )+/) - this splits by commas, spaces, and/or both. Currently deprecated. Regex hurts my brain.
   const onSubmit = (e) => {
     e.preventDefault();
 
     const pizzaData = {
       owner: userName,
       pizzaName,
-      ingredients: ingredients.split(/(?:,| )+/), // regex hurts my brain - this splits by commas, spaces, and/or both.
+      ingredients: ingredients.split(/([ ][ ]|[,])/),
       recipe,
     };
 
