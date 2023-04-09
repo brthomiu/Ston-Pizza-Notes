@@ -92,7 +92,7 @@ const Modal = (props) => {
                   onClick={() => confirmDelete()}
                   onTouchStart={() => confirmDelete()}
                 >
-                  Delete Pizza
+                  Delete Recipe
                 </button>
               </span>
             </div>
@@ -143,7 +143,7 @@ const Modal = (props) => {
                   className="deleteButton"
                   onClick={() => confirmDelete()}
                 >
-                  Delete Pizza
+                  Delete Recipe
                 </button>
               </span>
             </div>
