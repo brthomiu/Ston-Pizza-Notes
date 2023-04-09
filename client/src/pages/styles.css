@@ -1,0 +1,75 @@
+.container {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+/* Input Form Styles */
+
+.login--form-control {
+  padding: 0.5rem;
+  width: 18rem;
+  margin-bottom: 0.5rem;
+}
+
+.pizzaName--form-control {
+  padding: 0.5rem;
+  width: 32rem;
+  margin-bottom: 0.5rem;
+}
+
+.ingredients--form-control {
+  padding: 0.5rem;
+  width: 32rem;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe--form-control {
+  padding: 0.5rem;
+  width: 32rem;
+  height: 12rem;
+  margin-bottom: 0.5rem;
+}
+
+.login--button {
+  margin-top: 1rem;
+  width: 19.25rem;
+}
+
+/* View Pizza Page Styles */
+
+.pizzas--Box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+/* View Pizza Media Queries */
+
+@media screen and (max-width: 1340px) {
+  .pizzas--Box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pizzas--Box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pizzaName--form-control {
+    width: 22rem;
+  }
+
+  .ingredients--form-control {
+    width: 22rem;
+  }
+
+  .recipe--form-control {
+    width: 22rem;
+  }
+}

@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* nice red background-color: rgb(210, 72, 70); */
+/* nice green background-color: rgb(110, 180, 70); */
+
+
+button {
+ border: 1px solid;
+ padding: .5rem 1rem;
+ border-radius: .5rem;
+ background-color: rgb(110, 180, 70);
+ border-color: rgba(238, 183, 107, .0);
+ font-weight: 600;
+ font-size: medium;
+ color: rgb(0,0,0);
+ cursor: pointer;
+ box-shadow: -.3rem .3rem rgba(0,0,0,.5);
+
+}
+button:hover {
+  background-color: rgb(128, 210, 90);
+}
+
+button:not(:hover) {
+  transition: all .3s ease-in-out
+}
