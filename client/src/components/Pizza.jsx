@@ -70,7 +70,15 @@ const Pizza = (props) => {
             <p className="pizza--title-name">{props.owner}</p>
           </div>
         </span>
-        <IngredientCloud ingredients={props.ingredients} />
+        <span className="pizza--row">
+          {" "}
+          <h2>Ingredients:</h2>
+        </span>
+        <span className="pizza--ingredients">
+          {previewIngredients(props.ingredients).map((ingredient) => {
+            return <p className="pizza--ingredient">{ingredient}</p>;
+          })}
+        </span>
         <span className="pizza--row">
           <p>{previewRecipe(props.recipe)}</p>
         </span>
@@ -92,16 +100,22 @@ const Pizza = (props) => {
           setModalOpen={setModalOpen}
         />
         <div className="pizza">
-          <span className="pizza--title">
-            <h1>{props.pizzaName}</h1>
-            <div className="pizza--title-row">
-              <p>Made by:</p>
-              <p className="pizza--title-name">{props.owner}</p>
-            </div>
+        <span className="pizza--title">
+          <h1>{props.pizzaName}</h1>
+          <div className="pizza--title-row">
+            <p>Made by:</p>
+            <p className="pizza--title-name">{props.owner}</p>
+          </div>
+        </span>
+
+          <span className="pizza--row">
+            <h2>Ingredients:</h2>
           </span>
-
-          <IngredientCloud ingredients={props.ingredients} />
-
+          <span className="pizza--ingredients">
+            {previewIngredients(props.ingredients).map((ingredient) => {
+              return <p className="pizza--ingredient">{ingredient}</p>;
+            })}
+          </span>
           <span className="pizza--row">
             <p>{previewRecipe(props.recipe)}</p>
           </span>
