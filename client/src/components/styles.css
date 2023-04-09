@@ -312,6 +312,10 @@
     overflow-y: scroll;
   }
 
+  .modal--title: {
+    margin-top: 2rem;
+  }
+
   .modal--owner {
     margin-bottom: -1rem;
   }
