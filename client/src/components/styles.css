@@ -24,7 +24,7 @@
   background-color: rgb(210, 72, 70);
 }
 .navbar--logout:hover {
-  background-color: rgb(230, 90, 90)
+  background-color: rgb(230, 90, 90);
 }
 
 /* Modal Styles */
@@ -67,7 +67,7 @@
   padding: 0.25rem 0.4rem;
   border-radius: 1rem;
   cursor: default;
-  box-shadow: -0.25rem 0.35rem rgba(0, 0, 0, .5);
+  box-shadow: -0.25rem 0.35rem rgba(0, 0, 0, 0.5);
 }
 
 .modal--owner {
@@ -88,11 +88,12 @@
   font-weight: 700;
   font-size: x-large;
   right: 1rem;
-  bottom: 1rem;
-  padding: .5rem 1.2rem;
-  border-radius: 1rem; 
+  bottom: 3rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 1rem;
   position: fixed;
   display: none;
+  cursor: pointer;
 }
 
 .modal--mobile-x:hover {
@@ -106,10 +107,11 @@
   font-size: x-large;
   right: 1rem;
   top: 1rem;
-  padding: .5rem 1.2rem;
-  border-radius: 1rem; 
+  padding: 0.5rem 1.2rem;
+  border-radius: 1rem;
   position: fixed;
   display: none;
+  cursor: pointer;
 }
 
 .modal--name {
@@ -279,7 +281,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
   .pizza {
     width: 18rem;
   }
@@ -321,14 +322,14 @@
   }
 
   .modal--ingredients {
-    gap: .5rem;
+    gap: 0.5rem;
     margin: 1rem 1.5rem 0;
   }
 
   .modal--ingredient {
     margin: 0;
     font-size: small;
-    padding: .1rem;
+    padding: 0.1rem;
   }
 
   .modal--mobile-x {
@@ -341,5 +342,4 @@
   .modal--buttons {
     display: none;
   }
-
 }
