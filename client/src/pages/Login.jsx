@@ -32,7 +32,7 @@ const Login = () => {
     }
     // If login is successful or user is already logged in, navigates to the home page
     if (isSuccess || user) {
-      navigate("/ViewPizzas");
+      navigate("/Recipes");
     }
     // Reset state
     dispatch(reset());

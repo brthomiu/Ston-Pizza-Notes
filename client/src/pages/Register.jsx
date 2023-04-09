@@ -31,9 +31,9 @@ const Register = () => {
     if (isError) {
       toast.error(message);
     }
-    // If registration is successful or user is already logged in, navigates to the home page
+    // If registration is successful or user is already logged in, navigates to the recipes page
     if (isSuccess || user) {
-      navigate("/home");
+      navigate("/Recipes");
     }
     // Reset state
     dispatch(reset());

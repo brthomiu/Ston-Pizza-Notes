@@ -39,7 +39,7 @@ const CreatePizzas = () => {
   const createNewPizza = (pizzaData) => {
     dispatch(createPizza(pizzaData)); //Logs user out
     dispatch(reset()); //Resets state
-    navigate("/viewpizzas"); //Navigates to view pizzas page
+    navigate("/Create"); //Navigates to view pizzas page
   };
 
   // Dispatches login function with form input data

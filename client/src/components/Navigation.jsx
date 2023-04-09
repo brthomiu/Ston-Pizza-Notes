@@ -56,13 +56,14 @@ const Navigation = () => {
             <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
             Logout
           </button>
-        </nav>
-        <Link to="/Home">
+          <Link to="/Profile">
           <button>
             <FaUserAlt style={{ marginRight: ".25rem" }} />
             {user.name}
           </button>
         </Link>
+        </nav>
+
         <img className="navbar--logo" src={logo} alt="Logo" />
       </>
     );
