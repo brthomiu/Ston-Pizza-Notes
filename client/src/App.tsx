@@ -21,8 +21,8 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/about" element={<About />} />
-          <Route path="/createpizzas" element={<CreatePizzas />} />
-          <Route path="/viewpizzas" element={<ViewPizzas />} />
+          <Route path="/create" element={<CreatePizzas />} />
+          <Route path="/recipes" element={<ViewPizzas />} />
         </Routes>
       </Router>
     </div>

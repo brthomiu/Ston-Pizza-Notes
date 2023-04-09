@@ -11,7 +11,6 @@
 
 /* Input Form Styles */
 
-
 /* .form-group {
   display: flex;
   flex-direction: column;
@@ -88,15 +87,20 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .form {
+    width: 18rem;
+  }
+
   .pizzaName--form-control {
-    width: 22rem;
+    width: 18rem;
   }
 
   .ingredients--form-control {
-    width: 22rem;
+    width: 18rem;
   }
 
   .recipe--form-control {
-    width: 22rem;
+    width: 18rem;
   }
 }

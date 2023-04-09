@@ -51,7 +51,7 @@ const ViewPizzas = () => {
   } else {
     return (
       <div>
-        <Link to="/CreatePizzas">
+        <Link to="/Create">
           <button className="containerButton">New Recipe</button>
         </Link>
         <div className="pizzas-container">

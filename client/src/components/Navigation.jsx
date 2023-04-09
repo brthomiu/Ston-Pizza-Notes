@@ -5,7 +5,6 @@ import "./styles.css";
 import logo from "../assets/stonHeader.svg";
 import { FaUserAlt, FaBook, FaCaretSquareLeft } from "react-icons/fa";
 
-
 // Navigation bar component
 
 const Navigation = () => {
@@ -28,10 +27,15 @@ const Navigation = () => {
       <>
         <nav className="navbar">
           <Link to="/About">
-            <button><FaBook style={{marginRight:'.25rem'}} /> About</button>
+            <button>
+              <FaBook style={{ marginRight: ".25rem" }} /> About
+            </button>
           </Link>
           <Link to="/">
-            <button className="navbar--register" ><FaUserAlt style={{marginRight:'.25rem'}} />Login</button>
+            <button className="navbar--register">
+              <FaUserAlt style={{ marginRight: ".25rem" }} />
+              Login
+            </button>
           </Link>
         </nav>
         <img className="navbar--logo" src={logo} alt="Logo" />
@@ -42,14 +46,23 @@ const Navigation = () => {
       //Returns navigation bar
       <>
         <nav className="navbar">
-          <Link to="/Home">
-            <button><FaUserAlt style={{marginRight:'.25rem'}} />{user.name}</button>
+          <Link to="/Recipes">
+            <button>
+              <FaBook style={{ marginRight: ".25rem" }} />
+              Recipes
+            </button>
           </Link>
-          <Link to="/ViewPizzas">
-            <button><FaBook style={{marginRight:'.25rem'}} />Recipes</button>
-          </Link>
-          <button className="navbar--logout" onClick={onLogout}><FaCaretSquareLeft style={{marginRight:'.25rem'}} />Logout</button>
+          <button className="navbar--logout" onClick={onLogout}>
+            <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
+            Logout
+          </button>
         </nav>
+        <Link to="/Home">
+          <button>
+            <FaUserAlt style={{ marginRight: ".25rem" }} />
+            {user.name}
+          </button>
+        </Link>
         <img className="navbar--logo" src={logo} alt="Logo" />
       </>
     );
