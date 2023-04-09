@@ -25,7 +25,7 @@ app.use(express_1.default.static(path.join(__dirname, '../../client/dist')));
 app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../', '../', 'client', 'dist', 'index.html')));
 // Start server on designated port
 app.listen(port, () => {
-    logger_1.default.info(`⚡️[server]: Server is running at http://localhost:${port}`);
+    logger_1.default.info(`⚡️[server]: Server is running at (Dev only) http://localhost:${port}`);
     // Connect to DB
     (0, connectToDb_1.default)();
 });

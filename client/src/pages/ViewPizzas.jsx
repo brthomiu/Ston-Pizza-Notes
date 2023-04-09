@@ -20,7 +20,7 @@ const ViewPizzas = () => {
     }
     axios({
       method: "get",
-      url: "http://localhost:8000/api/pizzas",
+      url: "/api/pizzas",
     })
       .then(function (response) {
         setPizzaList(response.data);

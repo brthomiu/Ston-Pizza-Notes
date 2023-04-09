@@ -24,7 +24,10 @@ app.use(router);
 // Serve frontend
 app.use(express.static(path.join(__dirname, '../../client/dist')))
 
+
+
 app.get('*', (req, res) =>
+
     res.sendFile(
         path.resolve(
             __dirname,
@@ -33,12 +36,13 @@ app.get('*', (req, res) =>
             'client',
             'dist',
             'index.html')
+
     )
 )
 
 // Start server on designated port
 app.listen(port, () => {
-  log.info(`⚡️[server]: Server is running at http://localhost:${port}`);
+  log.info(`⚡️[server]: Server is running at (Dev only) http://localhost:${port}`);
 
   // Connect to DB
   connectToDb();
