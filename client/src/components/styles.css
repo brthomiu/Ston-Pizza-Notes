@@ -112,6 +112,7 @@
   position: fixed;
   display: none;
   cursor: pointer;
+  z-index: 100;
 }
 
 .modal--name {
@@ -278,7 +279,7 @@
 
 @media screen and (max-width: 1340px) {
   .navbar {
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
