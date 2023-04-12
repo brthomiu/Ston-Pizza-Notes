@@ -17,6 +17,7 @@ export const createPizza = expressAsyncHandler(async (req, res) => {
     pizzaName,
     ingredients,
     recipe,
+    likers: [],
   });
 
   if (pizza) {
@@ -26,6 +27,7 @@ export const createPizza = expressAsyncHandler(async (req, res) => {
       pizzaName: pizza.pizzaName,
       ingredients: pizza.ingredients,
       recipe: pizza.recipe,
+      likers: pizza.likers,
     });
   } else {
     res.status(400);
@@ -42,11 +44,46 @@ export const getPizzas = expressAsyncHandler(async (req, res) => {
   res.status(200).json(pizzas);
 });
 
+//@desc     Like pizza
+//@route    PUT /api/pizzas/:id
+//@access   Private
+export const likePizza = expressAsyncHandler(async (req: any, res) => {
+  const pizzaId = req.params.id.slice(0, 24);
+  const userId = req.params.id.slice(24);
+
+  const pizza = await Pizza.findOne({ _id: pizzaId });
+
+  let currentLikers = pizza.likers;
+
+  const updateLikers = (currentLikers) => {
+    if (!currentLikers.includes(userId)) {
+      currentLikers.push(userId);
+      let newLikers = currentLikers;
+      return newLikers;
+    } else {
+      const index = currentLikers.indexOf(userId);
+      if (index > -1) {
+        // only splice array when item is found
+        currentLikers.splice(index, 1); // 2nd parameter means remove one item only
+        let newLikers = currentLikers;
+        return newLikers;
+      }
+    }
+  };
+  console.log(pizza.likers);
+
+  const filter = { _id: pizzaId };
+  const update = { likers: updateLikers(currentLikers) };
+
+  let doc = await Pizza.findOneAndUpdate(filter, update, { new: true });
+
+  res.status(200).json({ id: req.params.id });
+});
+
 //@desc     Delete pizza
-//@route    DELETE /api/pizza/:id
+//@route    DELETE /api/pizzas/:id
 //@access   Private
 export const deletePizza = expressAsyncHandler(async (req: any, res) => {
-
   await Pizza.findByIdAndDelete(req.params.id);
 
   res.status(200).json({ id: req.params.id });

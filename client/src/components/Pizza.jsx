@@ -4,10 +4,16 @@ import "./styles.css";
 import axios from "axios";
 import Modal from "./Modal";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Pizza = (props) => {
-  // State for modal
+  // States for modal and refresh
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Global state from Redux store
+  const { user } = useSelector(
+    (state) => state.auth
+  );
 
   // Open modal function
   const openModal = () => {
@@ -41,6 +47,24 @@ const Pizza = (props) => {
     }
   };
 
+  // Pizza Like function
+  const likePizza = (pizzaId, userId, refresh, setRefresh) => {
+    axios({
+      method: "PUT",
+      url: `/api/pizzas/${pizzaId}${userId}`,
+    })
+      .catch((error) => {
+        throw new Error(`Axios error:${error}`);
+      })
+      .then(() => {
+        if (!refresh) {
+          setRefresh(true);
+        } else {
+          setRefresh(false);
+        }
+      });
+  };
+
   // Pizza deletion function
   const deletePizza = (pizzaId, refresh, setRefresh) => {
     axios({
@@ -59,9 +83,12 @@ const Pizza = (props) => {
       });
   };
 
+  // Return JSX Component
+
   if (!modalOpen) {
     return (
       <div className="pizza">
+        <button onClick={() => likePizza(props._id, user._id, props.refresh, props.setRefresh)}>Like!</button>
         <span className="pizza--title">
           <h1>{props.pizzaName}</h1>
           <div className="pizza--title-row">

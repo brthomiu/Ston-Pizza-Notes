@@ -35,6 +35,7 @@ const generateToken = (id) => {
 // POST /api/users
 exports.registerUser = (0, express_async_handler_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, email, password } = req.body;
+    const defaultDescription = `${name} has not created a profile yet.`;
     if (!name || !email || !password) {
         res.status(400);
         throw new Error("Please add all fields");
@@ -53,6 +54,10 @@ exports.registerUser = (0, express_async_handler_1.default)((req, res) => __awai
         name,
         email,
         password: hashedPassword,
+        description: defaultDescription,
+        private: false,
+        recipes: [],
+        favorites: [],
     });
     if (user) {
         res.status(201).json({

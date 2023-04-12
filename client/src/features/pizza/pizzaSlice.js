@@ -27,6 +27,25 @@ export const createPizza = createAsyncThunk(
   }
 );
 
+//Like pizza
+export const likePizza = createAsyncThunk(
+  "pizza/likePizza",
+  async (pizzaId, thunkAPI) => {
+    try {
+      const userId = thunkAPI.getState().auth.user._id;
+      return await pizzaService.likePizza(pizzaId, userId);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
 //Delete pizza
 export const deletePizza = createAsyncThunk(
   "pizza/deletePizza",

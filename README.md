@@ -49,8 +49,7 @@ Axios is used to make API fetch requests to the backend.
 - Add character limits for all input fields
 
 - Ability to add image(s) to recipe
-    - Limit file size for images
-    - JS image compression library?
+    - Looking at Imagekit CDN
 
 - Password reset functionality
 
@@ -62,9 +61,7 @@ Axios is used to make API fetch requests to the backend.
   - Show my recipes
 
 - Rating system
-  - 1-5 star system
   - Save name/ID of recipe and rating in user data
-    - (single array of objects that correspond to rated recipe)
 
 - Settings page
   - Input to edit user profile
@@ -77,3 +74,9 @@ Axios is used to make API fetch requests to the backend.
   - Show rated recipes on profile
 
 - Implement unit tests for basic features
+
+- Add amounts for ingredients
+  - Create a type interface for ingredients
+    - { ingredient1: {ingredient, amount}, ... }
+
+- Write up docs for the API

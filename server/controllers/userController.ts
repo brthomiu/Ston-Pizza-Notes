@@ -21,6 +21,7 @@ const generateToken = (id: string) => {
 // POST /api/users
 export const registerUser = expressAsyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
+  const defaultDescription = `${name} has not created a profile yet.`;
 
   if (!name || !email || !password) {
     res.status(400);
@@ -42,6 +43,10 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
     name,
     email,
     password: hashedPassword,
+    description: defaultDescription,
+    private: false,
+    recipes: [],
+    favorites: [],
   });
 
   if (user) {

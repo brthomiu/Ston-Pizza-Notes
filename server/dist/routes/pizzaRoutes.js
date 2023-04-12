@@ -10,4 +10,5 @@ const router = express_1.default.Router();
 router.post("/api/pizzas", pizzaController_1.createPizza);
 router.get("/api/pizzas", pizzaController_1.getPizzas);
 router.delete("/api/pizzas/:id", pizzaController_1.deletePizza);
+router.put("/api/pizzas/:id", pizzaController_1.likePizza);
 exports.default = router;

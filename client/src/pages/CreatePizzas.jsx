@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createPizza, reset } from "../features/pizza/pizzaSlice";
 import Spinner from "../components/Spinner";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 const CreatePizzas = () => {

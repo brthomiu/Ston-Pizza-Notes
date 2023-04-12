@@ -18,7 +18,7 @@ const logger_1 = __importDefault(require("./logger"));
 dotenv_1.default.config();
 function connectToDb() {
     return __awaiter(this, void 0, void 0, function* () {
-        const dbUri = process.env.DB_URI;
+        const dbUri = process.env.TEST_DB_URI;
         try {
             yield mongoose_1.default.connect(dbUri);
             logger_1.default.info("Connected to DB");
