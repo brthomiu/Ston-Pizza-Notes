@@ -62,6 +62,7 @@ const ViewPizzas = () => {
                   refresh={refresh}
                   setRefresh={setRefresh}
                   key={pizza._id}
+                  likers={pizza.likers}
                   _id={pizza._id}
                   owner={pizza.owner}
                   pizzaName={pizza.pizzaName}

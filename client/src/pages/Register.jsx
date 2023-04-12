@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
-import "./styles.css"
+import "./styles.css";
 
 const Register = () => {
   // Local state for username, email, and password entry forms
@@ -77,6 +77,7 @@ const Register = () => {
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <input
+              autocomplete="off"
               type="text"
               className="login--form-control"
               id="name"
@@ -89,6 +90,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              autocomplete="off"
               type="email"
               className="login--form-control"
               id="email"
@@ -101,6 +103,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              autocomplete="off"
               type="password"
               className="login--form-control"
               id="password"
@@ -113,6 +116,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              autocomplete="off"
               type="password"
               className="login--form-control"
               id="password2"

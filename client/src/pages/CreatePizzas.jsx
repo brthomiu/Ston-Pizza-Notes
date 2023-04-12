@@ -71,7 +71,7 @@ const CreatePizzas = () => {
         <br></br>
       </div>
       <section className="form">
-        <form onSubmit={onSubmit}>
+        <form autocomplete="off" onSubmit={onSubmit}>
           <div className="form-group">
             <input
               type="pizzaName"

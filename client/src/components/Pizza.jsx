@@ -5,15 +5,14 @@ import axios from "axios";
 import Modal from "./Modal";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import Like from "./Like";
 
 const Pizza = (props) => {
   // States for modal and refresh
   const [modalOpen, setModalOpen] = useState(false);
 
   // Global state from Redux store
-  const { user } = useSelector(
-    (state) => state.auth
-  );
+  const { user } = useSelector((state) => state.auth);
 
   // Open modal function
   const openModal = () => {
@@ -88,7 +87,6 @@ const Pizza = (props) => {
   if (!modalOpen) {
     return (
       <div className="pizza">
-        <button onClick={() => likePizza(props._id, user._id, props.refresh, props.setRefresh)}>Like!</button>
         <span className="pizza--title">
           <h1>{props.pizzaName}</h1>
           <div className="pizza--title-row">
@@ -107,8 +105,21 @@ const Pizza = (props) => {
         </span>
         <span className="pizza--row">
           <p>{previewRecipe(props.recipe)}</p>
+        </span>{" "}
+        <span className="pizza--bottom-buttons">
+        <div className="pizza--like">
+            <Like
+              _id={props._id}
+              refresh={props.refresh}
+              setRefresh={props.setRefresh}
+              likers={props.likers}
+              likePizza={likePizza}
+            />
+          </div>
+
+          <button onClick={() => openModal()}>Show More</button>
+
         </span>
-        <button onClick={() => openModal()}>Show More</button>
       </div>
     );
   } else {
@@ -117,6 +128,7 @@ const Pizza = (props) => {
         <Modal
           _id={props._id}
           refresh={props.refresh}
+          likers={props.likers}
           setRefresh={props.setRefresh}
           deletePizza={deletePizza}
           pizzaName={props.pizzaName}
@@ -145,7 +157,21 @@ const Pizza = (props) => {
           <span className="pizza--row">
             <p>{previewRecipe(props.recipe)}</p>
           </span>
-          <button onClick={() => openModal()}>Show More</button>
+
+          <span className="pizza--bottom-buttons">
+
+          <div className="pizza--like">
+              <Like
+                _id={props._id}
+                refresh={props.refresh}
+                setRefresh={props.setRefresh}
+                likers={props.likers}
+                likePizza={likePizza}
+              />
+            </div>
+            <button onClick={() => openModal()}>Show More</button>
+
+          </span>
         </div>
       </>
     );

@@ -80,3 +80,5 @@ Axios is used to make API fetch requests to the backend.
     - { ingredient1: {ingredient, amount}, ... }
 
 - Write up docs for the API
+
+- Add a share button to make the card symmetrical again
