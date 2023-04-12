@@ -3,10 +3,23 @@
   margin-bottom: 2.5rem;
 }
 
-.pizzas-container {
+.pizzas--container {
   margin: auto;
   justify-content: center;
   display: flex;
+}
+
+.pizzas--top {
+  display: flex;
+  flex-direction: rows;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pizzas--search {
+  padding: 0.5rem;
+  width: 16rem;
+  border-radius: .5rem;
 }
 
 /* Input Form Styles */
@@ -88,6 +101,18 @@
     justify-content: center;
   }
 
+  .pizzas--top {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .pizzas--search {
+    padding: 0.5rem;
+    width: 16rem;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+  }
+
   .form {
     width: 18rem;
     margin: auto;
@@ -96,18 +121,15 @@
   .pizzaName--form-control {
     width: 18rem;
     margin: auto;
-
   }
 
   .ingredients--form-control {
     width: 18rem;
-    margin: .5rem auto;
-
+    margin: 0.5rem auto;
   }
 
   .recipe--form-control {
     width: 18rem;
     margin: auto;
-
   }
 }

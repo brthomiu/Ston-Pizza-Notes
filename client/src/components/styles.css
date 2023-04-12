@@ -118,6 +118,10 @@
   z-index: 100;
 }
 
+.modal--mobile-like {
+  display: none;
+}
+
 .modal--name {
   font-weight: 600;
   font-size: large;
@@ -394,6 +398,10 @@ flex-start: right;
   top: 0;
 }
 
+.heart-text {
+  transform: rotate(-45deg);
+}
+
 /* Navbar Media Queries */
 
 @media screen and (max-width: 1340px) {
@@ -405,6 +413,10 @@ flex-start: right;
 @media screen and (max-width: 600px) {
   .pizza {
     width: 18rem;
+  }
+
+  .pizza--like {
+    margin-left: .3rem;
   }
   .navbar {
     justify-content: space-between;
@@ -464,7 +476,11 @@ flex-start: right;
   .modal--mobile-back {
     display: flex;
   }
-
+  .modal--mobile-like {
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
   .modal--buttons {
     display: none;
   }

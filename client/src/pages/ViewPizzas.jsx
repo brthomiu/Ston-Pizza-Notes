@@ -51,10 +51,18 @@ const ViewPizzas = () => {
   } else {
     return (
       <div>
-        <Link to="/Create">
-          <button className="containerButton">New Recipe</button>
-        </Link>
-        <div className="pizzas-container">
+        <div className="pizzas--top">
+          <Link to="/Create">
+            <button className="containerButton">New Recipe</button>
+          </Link>
+          {/* <form autocomplete="off">
+            <input
+              className="pizzas--search"
+              placeholder="Search for recipes."
+            ></input>
+          </form> */}
+        </div>
+        <div className="pizzas--container">
           <div className="pizzas--Box">
             {pizzaList.map((pizza) => (
               <div>

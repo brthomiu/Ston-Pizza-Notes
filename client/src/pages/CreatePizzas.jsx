@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createPizza, reset } from "../features/pizza/pizzaSlice";
+import toast from "react-hot-toast";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
@@ -40,6 +41,7 @@ const CreatePizzas = () => {
     dispatch(createPizza(pizzaData)); //Logs user out
     dispatch(reset()); //Resets state
     navigate("/Recipes"); //Navigates to view pizzas page
+    toast("New recipe created!")
   };
 
   // Dispatches login function with form input data

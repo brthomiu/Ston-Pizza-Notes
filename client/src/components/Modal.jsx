@@ -5,6 +5,7 @@ import "./styles.css";
 import { useSelector } from "react-redux";
 import IngredientCloud from "./IngredientCloud";
 import { BsTrashFill, BsXLg } from "react-icons/bs";
+import Like from "./Like";
 
 const Modal = (props) => {
   //State for delete confirmation dialog
@@ -29,6 +30,15 @@ const Modal = (props) => {
       <>
         <div className="modal--bg">
           <div className="modal--container">
+            <div className="modal--mobile-like">
+            <Like
+              _id={props._id}
+              refresh={props.refresh}
+              setRefresh={props.setRefresh}
+              likers={props.likers}
+              likePizza={props.likePizza}
+            />
+            </div>
             <button onClick={() => closeModal()} className="modal--mobile-back">
               <BsXLg />
             </button>
@@ -48,6 +58,13 @@ const Modal = (props) => {
               <p>{props.recipe}</p>
             </span>
             <span className="modal--buttons">
+              <Like
+                _id={props._id}
+                refresh={props.refresh}
+                setRefresh={props.setRefresh}
+                likers={props.likers}
+                likePizza={props.likePizza}
+              />
               <button onClick={() => closeModal()}>Close</button>
             </span>
           </div>
@@ -60,6 +77,15 @@ const Modal = (props) => {
         <>
           <div className="modal--bg">
             <div className="modal--container">
+            <div className="modal--mobile-like">
+            <Like
+              _id={props._id}
+              refresh={props.refresh}
+              setRefresh={props.setRefresh}
+              likers={props.likers}
+              likePizza={props.likePizza}
+            />
+            </div>
               <button
                 onClick={() => confirmDelete()}
                 className="modal--mobile-x"
@@ -86,6 +112,13 @@ const Modal = (props) => {
                 <p>{props.recipe}</p>
               </span>
               <span className="modal--buttons">
+                <Like
+                  _id={props._id}
+                  refresh={props.refresh}
+                  setRefresh={props.setRefresh}
+                  likers={props.likers}
+                  likePizza={props.likePizza}
+                />
                 <button onClick={() => closeModal()}>Close</button>
                 <button
                   className="deleteButton"
@@ -111,6 +144,15 @@ const Modal = (props) => {
               setShowConfirmation={setShowConfirmation}
             />
             <div className="modal--container">
+            <div className="modal--mobile-like">
+            <Like
+              _id={props._id}
+              refresh={props.refresh}
+              setRefresh={props.setRefresh}
+              likers={props.likers}
+              likePizza={props.likePizza}
+            />
+            </div>
               <button
                 onClick={() => confirmDelete()}
                 className="modal--mobile-x"
@@ -138,6 +180,13 @@ const Modal = (props) => {
                 <p>{props.recipe}</p>
               </span>
               <span className="modal--buttons">
+                <Like
+                  _id={props._id}
+                  refresh={props.refresh}
+                  setRefresh={props.setRefresh}
+                  likers={props.likers}
+                  likePizza={props.likePizza}
+                />
                 <button onClick={() => closeModal()}>Close</button>
                 <button
                   className="deleteButton"

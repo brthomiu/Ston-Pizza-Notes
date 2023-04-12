@@ -1,10 +1,12 @@
 /* global document */
 import "./styles.css";
+import toast from "react-hot-toast";
 
 const ConfirmDelete = (props) => {
   const deletePizza = () => {
     props.deletePizza(props._id, props.refresh, props.setRefresh);
     document.body.style.overflow = "unset";
+    toast("Recipe deleted.")
   };
 
   return (

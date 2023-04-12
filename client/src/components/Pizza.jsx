@@ -135,6 +135,7 @@ const Pizza = (props) => {
           ingredients={props.ingredients}
           recipe={props.recipe}
           setModalOpen={setModalOpen}
+          likePizza={likePizza}
         />
         <div className="pizza">
           <span className="pizza--title">

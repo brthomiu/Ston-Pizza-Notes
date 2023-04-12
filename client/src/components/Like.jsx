@@ -25,7 +25,7 @@ const Like = (props) => {
           handleLikeClick(props._id, user._id, props.refresh, props.setRefresh)
         }
       >
-        <div className="pizza--like-heart-empty"></div>
+        <div className="pizza--like-heart-empty"><h2 className="heart-text">{props.likers.length}</h2></div>
       </div>
     );
   } else {
@@ -41,7 +41,7 @@ const Like = (props) => {
           )
         }
       >
-        <div className="pizza--like-heart"></div>
+        <div className="pizza--like-heart"><h2 className="heart-text">{props.likers.length}</h2></div>
       </div>
     );
   }

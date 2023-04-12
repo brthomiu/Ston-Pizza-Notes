@@ -5,7 +5,7 @@ import log from "./logger";
 dotenv.config();
 
 async function connectToDb() {
-  const dbUri = process.env.TEST_DB_URI!;
+  const dbUri = process.env.DB_URI!;
   try {
     await mongoose.connect(dbUri);
     log.info("Connected to DB")
