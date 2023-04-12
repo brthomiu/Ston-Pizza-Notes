@@ -22,8 +22,8 @@ const Pizza = (props) => {
 
   // Function to parse recipe text into a preview
   const previewRecipe = (recipe) => {
-    if (recipe.length > 140) {
-      let preview = `${recipe.slice(0, 149)}.......`;
+    if (recipe.length > 139) {
+      let preview = `${recipe.slice(0, 139)}.......`;
       return preview;
     } else {
       return recipe;
@@ -34,9 +34,9 @@ const Pizza = (props) => {
   const previewIngredients = (ingredients) => {
     if (ingredients.length > 4) {
       let preview = [
-        ingredients[0],
-        ingredients[1],
-        ingredients[2],
+        ingredients[0].toLowerCase(),
+        ingredients[1].toLowerCase(),
+        ingredients[2].toLowerCase(),
         `${ingredients.length - 3} more`,
       ];
 

@@ -201,10 +201,10 @@
 .pizza {
   box-shadow: -0.3rem 0.3rem rgba(0, 0, 0, 0.5);
   width: 22rem;
-  height: 28rem;
+  height: 32rem;
   display: grid;
   grid-template-rows: 2fr 1fr 1fr 4fr 1fr;
-  padding: 2rem;
+  padding: 1rem 2rem;
   justify-content: center;
   border-radius: 1rem;
   background-color: rgb(35, 35, 35);
@@ -233,7 +233,6 @@
 .pizza--ingredients {
   display: flex;
   flex-direction: row;
-  margin-top: -1rem;
   flex-wrap: flex-start;
   justify-content: space-between;
   width: 20rem;
@@ -243,7 +242,8 @@
 
 .pizza--ingredient {
   color: rgb(0, 0, 0);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: small;
   background-color: rgba(235, 185, 130, 0.8);
   padding: 0.3rem 0.5rem;
   border-radius: 1rem;
@@ -281,6 +281,7 @@
 
 .pizza--title-name {
   margin-top: 0.5rem;
+  margin-bottom: -1rem;
   font-size: x-large;
 }
 
