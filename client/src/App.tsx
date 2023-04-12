@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 // Page Style
 import "./App.css";
 // Page/Component imports
@@ -25,6 +26,17 @@ function App() {
           <Route path="/recipes" element={<ViewPizzas />} />
         </Routes>
       </Router>
+      <Toaster
+        toastOptions={{
+          className: "",
+          style: {
+            marginTop: "2rem",
+            border: "1px solid #713200",
+            padding: "16px",
+            color: "#713200",
+          },
+        }}
+      />
     </div>
   );
 }

@@ -94,7 +94,7 @@ const Pizza = (props) => {
             <p className="pizza--title-name">{props.owner}</p>
           </div>
         </span>
-        <span className="pizza--row">
+        <span>
           {" "}
           <h2>Ingredients:</h2>
         </span>
@@ -107,7 +107,7 @@ const Pizza = (props) => {
           <p>{previewRecipe(props.recipe)}</p>
         </span>{" "}
         <span className="pizza--bottom-buttons">
-        <div className="pizza--like">
+          <div className="pizza--like">
             <Like
               _id={props._id}
               refresh={props.refresh}
@@ -118,7 +118,6 @@ const Pizza = (props) => {
           </div>
 
           <button onClick={() => openModal()}>Show More</button>
-
         </span>
       </div>
     );
@@ -146,7 +145,7 @@ const Pizza = (props) => {
             </div>
           </span>
 
-          <span className="pizza--row">
+          <span>
             <h2>Ingredients:</h2>
           </span>
           <span className="pizza--ingredients">
@@ -159,8 +158,7 @@ const Pizza = (props) => {
           </span>
 
           <span className="pizza--bottom-buttons">
-
-          <div className="pizza--like">
+            <div className="pizza--like">
               <Like
                 _id={props._id}
                 refresh={props.refresh}
@@ -170,7 +168,6 @@ const Pizza = (props) => {
               />
             </div>
             <button onClick={() => openModal()}>Show More</button>
-
           </span>
         </div>
       </>

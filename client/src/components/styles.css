@@ -238,16 +238,18 @@
 }
 
 .pizza--ingredient {
-  width: 5rem;
   color: rgb(0, 0, 0);
   font-weight: 600;
   background-color: rgba(235, 185, 130, 0.8);
-  padding: 0.25rem 0;
+  padding: 0.3rem 0.5rem;
   border-radius: 1rem;
   cursor: default;
   margin: auto;
   align-content: center;
   box-shadow: -0.25rem 0.35rem rgba(0, 0, 0, 1);
+  max-width: 5rem;
+  max-height: 4rem;
+  overflow: hidden;
 }
 
 .pizza--row {
@@ -257,6 +259,8 @@
   justify-content: flex-start;
   gap: 1rem;
   width: 20rem;
+  max-width: 20rem;
+  overflow: hidden;
 }
 
 .pizza--title {
@@ -286,7 +290,7 @@
 
 .pizza--like-container {
   background-color: rgba(0,0,0,0);
-  positon: relative;
+  position: relative;
   box-shadow: none;
   padding-top: 1rem;
   width: 3rem;
@@ -423,7 +427,7 @@ flex-start: right;
     overflow-y: scroll;
   }
 
-  .modal--title: {
+  .modal--title {
     margin-top: 2rem;
   }
 

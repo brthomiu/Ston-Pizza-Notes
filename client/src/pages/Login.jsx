@@ -1,11 +1,13 @@
+/* global console */
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import { login, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 import "./styles.css";
 import { FaUserAlt } from "react-icons/fa";
+import toast from "react-hot-toast";
+
 
 const Login = () => {
   // Local state for email and password entry forms
@@ -28,7 +30,7 @@ const Login = () => {
   useEffect(() => {
     // Throws error if there is a login error
     if (isError) {
-      toast.error(message);
+      toast("Invalid login credentials.", {duration: 4000});
     }
     // If login is successful or user is already logged in, navigates to the home page
     if (isSuccess || user) {

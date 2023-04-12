@@ -1,10 +1,11 @@
+/* global console */
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { register, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 import "./styles.css";
+import toast from "react-hot-toast"
 
 const Register = () => {
   // Local state for username, email, and password entry forms
@@ -29,7 +30,7 @@ const Register = () => {
   useEffect(() => {
     // Throws error if there is a registration error
     if (isError) {
-      toast.error(message);
+      toast(message, {duration: 4000});
     }
     // If registration is successful or user is already logged in, navigates to the recipes page
     if (isSuccess || user) {
@@ -53,7 +54,7 @@ const Register = () => {
     e.preventDefault();
 
     if (password !== password2) {
-      toast.error("Passwords do not match");
+      toast("Passwords do not match", {duration: 4000});
     } else {
       const userData = {
         name,
