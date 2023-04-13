@@ -126,12 +126,7 @@ const CreatePizzas = () => {
             <button type="submit" className="login--button">
               Create Recipe
             </button>
-            <button
-              onClick={() => navigate("/Recipes")}
-              className="login--button-back-mobile"
-            >
-              Back
-            </button>
+
           </div>
         </form>
       </section>
