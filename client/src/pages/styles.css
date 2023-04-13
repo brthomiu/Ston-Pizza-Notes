@@ -133,6 +133,7 @@
   .form {
     width: 18rem;
     margin: auto;
+    flex-direction: column;
   }
 
   .pizzaName--form-control {
