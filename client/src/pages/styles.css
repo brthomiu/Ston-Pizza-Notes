@@ -133,7 +133,6 @@
   .form {
     width: 18rem;
     margin: auto;
-    flex-direction: column;
   }
 
   .form-group-buttons {
