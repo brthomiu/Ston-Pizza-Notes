@@ -134,7 +134,10 @@
     width: 18rem;
     margin: auto;
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .form-group-buttons {
+    flex-direction: column;
   }
 
   .pizzaName--form-control {
