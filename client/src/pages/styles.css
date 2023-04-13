@@ -19,7 +19,7 @@
 .pizzas--search {
   padding: 0.5rem;
   width: 16rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* Input Form Styles */
@@ -134,7 +134,10 @@
     width: 18rem;
     margin: auto;
   }
-
+  .login--button-back {
+    margin-top: 1rem;
+    width: 19.25rem;
+  }
   .form-group-buttons {
     flex-direction: column;
   }
