@@ -81,6 +81,12 @@
   width: 8rem;
 }
 
+.login--button-back-mobile {
+  margin-top: 1rem;
+  width: 19.25rem;
+  display: none;
+}
+
 .login--button-blue {
   margin-top: 1rem;
   width: 19.25rem;
@@ -135,6 +141,11 @@
     margin: auto;
   }
   .login--button-back {
+    margin-top: 1rem;
+    width: 19.25rem;
+    display: none;
+  }
+  .login--button-back-mobile {
     margin-top: 1rem;
     width: 19.25rem;
   }
