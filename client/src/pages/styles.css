@@ -31,6 +31,11 @@
   margin: auto;
 } */
 
+.form {
+  display: flex;
+  justify-content: center;
+}
+
 .form-group-buttons {
   display: flex;
   flex-direction: row;
