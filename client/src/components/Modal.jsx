@@ -52,7 +52,7 @@ const Modal = (props) => {
               <p className="modal--name">{props.owner}</p>
             </span>
 
-            <IngredientCloud ingredients={props.ingredients} />
+            <IngredientCloud capitalizeFirst={props.capitalizeFirst} ingredients={props.ingredients} />
 
             <span className="modal--recipe">
               <p>{props.recipe}</p>
@@ -106,7 +106,7 @@ const Modal = (props) => {
                 <p>Made by:</p>
                 <p className="modal--name">{props.owner}</p>
               </span>
-              <IngredientCloud ingredients={props.ingredients} />
+              <IngredientCloud capitalizeFirst={props.capitalizeFirst} ingredients={props.ingredients} />
 
               <span className="modal--recipe">
                 <p>{props.recipe}</p>
@@ -174,7 +174,7 @@ const Modal = (props) => {
                 <p>Made by:</p>
                 <p className="modal--name">{props.owner}</p>
               </span>
-              <IngredientCloud ingredients={props.ingredients} />
+              <IngredientCloud capitalizeFirst={props.capitalizeFirst} ingredients={props.ingredients} />
 
               <span className="modal--recipe">
                 <p>{props.recipe}</p>

@@ -40,7 +40,7 @@
   z-index: 1000;
 }
 
-.modal--container {
+/* .modal--container {
   position: fixed;
   background-color: rgb(36, 36, 36);
   width: 72%;
@@ -50,12 +50,27 @@
   z-index: 1001;
   box-shadow: 0 0 3rem 2rem rgba(0, 0, 0, 0.25);
   padding: 0 4% 6%;
+} */
+
+.modal--container {
+  position: fixed;
+  background-color: rgb(36, 36, 36);
+  width: 46rem;
+  height: 42rem;
+  border-radius: 1rem;
+  z-index: 1001;
+  box-shadow: 0 0 3rem 2rem rgba(0, 0, 0, 0.25);
+  padding: 0 1rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -21rem; /* Negative half of height. */
+  margin-left: -24rem; /* Negative half of width. */
 }
 
 .modal--ingredients {
   display: flex;
   flex-direction: row;
-  gap: 0rem 1rem;
+  gap: 0rem 0.6rem;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
@@ -67,10 +82,15 @@
   color: rgb(0, 0, 0);
   font-weight: 600;
   background-color: rgba(235, 185, 130, 0.8);
-  padding: 0.25rem 0.5rem;
+  padding: 0.3rem 0.65rem;
   border-radius: 1rem;
   cursor: default;
   box-shadow: -0.25rem 0.35rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  margin: 0.2rem 0;
 }
 
 .modal--owner {
@@ -91,8 +111,8 @@
   font-weight: 700;
   font-size: x-large;
   right: 1rem;
-  bottom: 3rem;
-  padding: 0.5rem 1.2rem;
+  bottom: 2rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 1rem;
   position: fixed;
   display: none;
@@ -110,7 +130,7 @@
   font-size: x-large;
   right: 1rem;
   top: 2rem;
-  padding: 0.5rem 1.2rem;
+  padding: 0.7rem 1.8rem;
   border-radius: 1rem;
   position: fixed;
   display: none;
@@ -120,6 +140,7 @@
 
 .modal--mobile-like {
   display: none;
+  margin-bottom: -2rem;
 }
 
 .modal--name {
@@ -294,7 +315,7 @@
 }
 
 .pizza--like-container {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   position: relative;
   box-shadow: none;
   padding-top: 1rem;
@@ -303,9 +324,9 @@
   z-index: 2;
 }
 .pizza--bottom-buttons {
-display: flex;
-flex-direction: row;
-flex-start: right;
+  display: flex;
+  flex-direction: row;
+  flex-start: right;
 }
 
 .pizza--like-heart-empty {
@@ -339,7 +360,6 @@ flex-start: right;
   position: absolute;
   width: 2rem;
   z-index: 2;
-
 }
 
 .pizza--like-heart-empty:hover:before,
@@ -411,13 +431,13 @@ flex-start: right;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .pizza {
     width: 18rem;
   }
 
   .pizza--like {
-    margin-left: .3rem;
+    margin-left: 0.3rem;
   }
   .navbar {
     justify-content: space-between;
@@ -438,6 +458,7 @@ flex-start: right;
     box-shadow: 0 0 3rem 2rem rgba(0, 0, 0, 0.25);
     padding: 0;
     overflow-y: scroll;
+    margin: 0;
   }
 
   .modal--title {

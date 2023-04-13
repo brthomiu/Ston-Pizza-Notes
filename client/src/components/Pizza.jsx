@@ -41,8 +41,8 @@ const Pizza = (props) => {
   // Function to parse recipe text into a preview
   const previewIngredient = (recipe) => {
     let capRecipe = capitalizeFirst(recipe);
-    if (capRecipe.length > 10) {
-      let preview = `${capRecipe.slice(0, 7)}...`;
+    if (capRecipe.length > 11) {
+      let preview = `${capRecipe.slice(0, 8)}...`;
       return preview;
     } else {
       return capRecipe;
@@ -155,6 +155,7 @@ const Pizza = (props) => {
           recipe={props.recipe}
           setModalOpen={setModalOpen}
           likePizza={likePizza}
+          capitalizeFirst={capitalizeFirst}
         />
         <div className="pizza">
           <span className="pizza--title">
