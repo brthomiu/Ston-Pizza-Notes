@@ -148,6 +148,7 @@
   .login--button-back-mobile {
     margin-top: 1rem;
     width: 19.25rem;
+    display: flex;
   }
   .form-group-buttons {
     flex-direction: column;
