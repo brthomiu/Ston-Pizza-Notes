@@ -149,6 +149,8 @@
     margin-top: 1rem;
     width: 19.25rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .form-group-buttons {
     flex-direction: column;
