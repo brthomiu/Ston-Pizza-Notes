@@ -30,13 +30,32 @@ const Pizza = (props) => {
     }
   };
 
+  // Function to capitalize first letter of ingredient
+  const capitalizeFirst = (input) => {
+    let output = `${input.slice(0, 1).toUpperCase()}${
+      input.slice(1).toLowerCase()
+    }`;
+    return output;
+  };
+
+  // Function to parse recipe text into a preview
+  const previewIngredient = (recipe) => {
+    let capRecipe = capitalizeFirst(recipe);
+    if (capRecipe.length > 10) {
+      let preview = `${capRecipe.slice(0, 7)}...`;
+      return preview;
+    } else {
+      return capRecipe;
+    }
+  };
+
   // // Function to condense ingredients into a preview
   const previewIngredients = (ingredients) => {
     if (ingredients.length > 4) {
       let preview = [
-        ingredients[0].toLowerCase(),
-        ingredients[1].toLowerCase(),
-        ingredients[2].toLowerCase(),
+        previewIngredient(ingredients[0]),
+        previewIngredient(ingredients[1]),
+        previewIngredient(ingredients[2]),
         `${ingredients.length - 3} more`,
       ];
 

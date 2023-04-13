@@ -40,7 +40,7 @@ Axios is used to make API fetch requests to the backend.
 
 # Developer notes
 
-## Current version - 0.2a - 4/9/2023
+## Current version - 0.3a - 4/12/2023
 
 ---
 
