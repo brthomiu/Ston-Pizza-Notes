@@ -31,6 +31,13 @@
   margin: auto;
 } */
 
+.form-group-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .login--form-control {
   padding: 0.5rem;
   width: 18rem;
@@ -62,6 +69,11 @@
 .login--button {
   margin-top: 1rem;
   width: 19.25rem;
+}
+
+.login--button-back {
+  margin-top: 1rem;
+  width: 8rem;
 }
 
 .login--button-blue {

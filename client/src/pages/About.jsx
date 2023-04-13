@@ -3,11 +3,18 @@ import "./styles.css";
 const About = () => {
   return (
     <div>
-      <h2>Welcome to Stön Recipe Notes v0.2a</h2>
-      Stön Recipe Notes is a platform for cooks and chefs to
-      <br></br> develop new recipes and share them with friends and family.
+      <h2>Welcome to Stön Recipe Notes v0.3a</h2>
+      Stön Recipe Notes is a platform created to help cooks to develop and share
+      new recipes.
       <br></br>
       <br></br>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/brthomiu/Ston-Pizza-Notes"
+      >
+        <button>View the source code for this application on GitHub.</button>
+      </a>
       <p>Made by Brad Thompson - 2023</p>
     </div>
   );

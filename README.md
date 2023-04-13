@@ -38,9 +38,14 @@ Axios is used to make API fetch requests to the backend.
 
 ---
 
-# Developer notes
+# Version Notes
 
 ## Current version - 0.3a - 4/12/2023
+
+ - Added ability for users to love recipes
+    - Displays how many "loves" each recipe has
+ - Added toast notifications for various success/error messages
+ - Updated styles for a more consistent user experience
 
 ---
 

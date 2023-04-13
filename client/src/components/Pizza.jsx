@@ -21,9 +21,9 @@ const Pizza = (props) => {
   };
 
   // Function to parse recipe text into a preview
-  const previewRecipe = (recipe) => {
-    if (recipe.length > 139) {
-      let preview = `${recipe.slice(0, 139)}.......`;
+  const previewRecipe = (recipe, length) => {
+    if (recipe.length > length) {
+      let preview = `${recipe.slice(0, length-2)}...`;
       return preview;
     } else {
       return recipe;
@@ -107,7 +107,7 @@ const Pizza = (props) => {
     return (
       <div className="pizza">
         <span className="pizza--title">
-          <h1>{props.pizzaName}</h1>
+          <h1>{previewRecipe(props.pizzaName, 22)}</h1>
           <div className="pizza--title-row">
             <p>Made by:</p>
             <p className="pizza--title-name">{props.owner}</p>
@@ -123,7 +123,7 @@ const Pizza = (props) => {
           })}
         </span>
         <span className="pizza--row">
-          <p>{previewRecipe(props.recipe)}</p>
+          <p>{previewRecipe(props.recipe, 199)}</p>
         </span>{" "}
         <span className="pizza--bottom-buttons">
           <div className="pizza--like">
@@ -159,7 +159,7 @@ const Pizza = (props) => {
         />
         <div className="pizza">
           <span className="pizza--title">
-            <h1>{props.pizzaName}</h1>
+            <h1>{previewRecipe(props.pizzaName, 22)}</h1>
             <div className="pizza--title-row">
               <p>Made by:</p>
               <p className="pizza--title-name">{props.owner}</p>
@@ -175,7 +175,7 @@ const Pizza = (props) => {
             })}
           </span>
           <span className="pizza--row">
-            <p>{previewRecipe(props.recipe)}</p>
+            <p>{previewRecipe(props.recipe, 199)}</p>
           </span>
 
           <span className="pizza--bottom-buttons">

@@ -41,7 +41,7 @@ const CreatePizzas = () => {
     dispatch(createPizza(pizzaData)); //Logs user out
     dispatch(reset()); //Resets state
     navigate("/Recipes"); //Navigates to view pizzas page
-    toast("New recipe created!")
+    toast("New recipe created!");
   };
 
   // Dispatches login function with form input data
@@ -76,6 +76,7 @@ const CreatePizzas = () => {
         <form autocomplete="off" onSubmit={onSubmit}>
           <div className="form-group">
             <input
+              maxlength="40"
               type="pizzaName"
               className="pizzaName--form-control"
               id="pizzaName"
@@ -88,6 +89,7 @@ const CreatePizzas = () => {
 
           <div className="form-group">
             <textarea
+              maxlength="300"
               rows="3"
               cols="40"
               type="ingredients"
@@ -102,6 +104,7 @@ const CreatePizzas = () => {
 
           <div className="form-group">
             <textarea
+              maxlength="3000"
               rows="5"
               cols="40"
               type="recipe"
@@ -113,7 +116,13 @@ const CreatePizzas = () => {
               onChange={onChange}
             ></textarea>
           </div>
-          <div className="form-group">
+          <div className="form-group-buttons">
+            <button
+              onClick={() => navigate("/Recipes")}
+              className="login--button-back"
+            >
+              Back
+            </button>
             <button type="submit" className="login--button">
               Create Recipe
             </button>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { register, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 import "./styles.css";
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
 
 const Register = () => {
   // Local state for username, email, and password entry forms
@@ -30,7 +30,7 @@ const Register = () => {
   useEffect(() => {
     // Throws error if there is a registration error
     if (isError) {
-      toast(message, {duration: 4000});
+      toast(message, { duration: 4000 });
     }
     // If registration is successful or user is already logged in, navigates to the recipes page
     if (isSuccess || user) {
@@ -53,8 +53,10 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (password !== password2) {
-      toast("Passwords do not match", {duration: 4000});
+    if (password.length < 8) {
+      toast("Your password must be at least 8 characters.", { duration: 4000 });
+    } else if (password !== password2) {
+      toast("Passwords do not match", { duration: 4000 });
     } else {
       const userData = {
         name,
