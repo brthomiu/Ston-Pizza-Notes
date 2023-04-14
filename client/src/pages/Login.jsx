@@ -1,4 +1,3 @@
-/* global console */
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
@@ -7,7 +6,6 @@ import Spinner from "../components/Spinner";
 import "./styles.css";
 import { FaUserAlt } from "react-icons/fa";
 import toast from "react-hot-toast";
-
 
 const Login = () => {
   // Local state for email and password entry forms
@@ -30,7 +28,7 @@ const Login = () => {
   useEffect(() => {
     // Throws error if there is a login error
     if (isError) {
-      toast("Invalid login credentials.", {duration: 4000});
+      toast("Invalid login credentials.", { duration: 4000 });
     }
     // If login is successful or user is already logged in, navigates to the home page
     if (isSuccess || user) {
@@ -70,6 +68,7 @@ const Login = () => {
     <div>
       <section className="form">
         <form onSubmit={onSubmit}>
+          {/* Login email entry */}
           <div className="form-group">
             <input
               type="email"
@@ -81,7 +80,7 @@ const Login = () => {
               onChange={onChange}
             />
           </div>
-
+          {/* Login password entry */}
           <div className="form-group">
             <input
               type="password"
@@ -93,17 +92,16 @@ const Login = () => {
               onChange={onChange}
             />
           </div>
-
+          {/* Login and register buttons */}
           <div className="form-group">
             <button type="submit" className="login--button">
               Login
             </button>
           </div>
-
           <div className="form-group">
             <Link to="/Register">
               <button className="login--button-blue">
-                <FaUserAlt style={{marginRight:'.25rem'}} />
+                <FaUserAlt style={{ marginRight: ".25rem" }} />
                 Register
               </button>
             </Link>

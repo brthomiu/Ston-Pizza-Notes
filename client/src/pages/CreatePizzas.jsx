@@ -6,6 +6,8 @@ import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
+// For the sake of this codebase just pretend that "pizza" means "recipe"
+
 const CreatePizzas = () => {
   // Local state for pizza entry
   const [formData, setFormData] = useState({
@@ -15,6 +17,7 @@ const CreatePizzas = () => {
     recipe: "",
   });
 
+  // Form data for pizza object
   const { pizzaName, ingredients, recipe } = formData;
 
   // Initialize dispatch and navigate
@@ -74,6 +77,7 @@ const CreatePizzas = () => {
       </div>
       <section className="form">
         <form autocomplete="off" onSubmit={onSubmit}>
+          {/* Recipe name entry section */}
           <div className="form-group">
             <input
               maxlength="40"
@@ -86,7 +90,7 @@ const CreatePizzas = () => {
               onChange={onChange}
             />
           </div>
-
+          {/* Ingredient entry section */}
           <div className="form-group">
             <textarea
               maxlength="300"
@@ -101,7 +105,7 @@ const CreatePizzas = () => {
               onChange={onChange}
             ></textarea>
           </div>
-
+          {/* Recipe body entry section */}
           <div className="form-group">
             <textarea
               maxlength="3000"
@@ -116,6 +120,7 @@ const CreatePizzas = () => {
               onChange={onChange}
             ></textarea>
           </div>
+          {/* Recipe submission and back buttons */}
           <div className="form-group-buttons">
             <button
               onClick={() => navigate("/Recipes")}
@@ -126,7 +131,6 @@ const CreatePizzas = () => {
             <button type="submit" className="login--button">
               Create Recipe
             </button>
-
           </div>
         </form>
       </section>

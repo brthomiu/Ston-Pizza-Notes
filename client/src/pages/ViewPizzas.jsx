@@ -5,6 +5,9 @@ import Spinner from "../components/Spinner";
 import axios from "axios";
 import "./styles.css";
 import { useNavigate, Link } from "react-router-dom";
+import toast from "react-hot-toast";
+
+// For the sake of this codebase just pretend that "pizza" means "recipe"
 
 const ViewPizzas = () => {
   // Local state to store pizza data fetched from backend
@@ -20,8 +23,7 @@ const ViewPizzas = () => {
   // Hook to kick you back to login if you aren't authenticated
   useEffect(() => {
     if (isError) {
-      // eslint-disable-next-line no-undef
-      console.log(message);
+      toast("Please login to see recipes.");
     }
 
     if (!user) {
@@ -52,9 +54,11 @@ const ViewPizzas = () => {
     return (
       <div>
         <div className="pizzas--top">
+          {/* Create recipe button */}
           <Link to="/Create">
             <button className="containerButton">New Recipe</button>
           </Link>
+          {/* Recipe search form */}
           {/* <form autocomplete="off">
             <input
               className="pizzas--search"
@@ -63,6 +67,7 @@ const ViewPizzas = () => {
           </form> */}
         </div>
         <div className="pizzas--container">
+          {/* Recipe components mapped and rendered */}
           <div className="pizzas--Box">
             {pizzaList.map((pizza) => (
               <div>

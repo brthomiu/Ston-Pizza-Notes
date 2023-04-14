@@ -3,13 +3,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
-import {FaCaretSquareLeft} from 'react-icons/fa'
+import { FaCaretSquareLeft } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Home = () => {
+  // Initialize navigate and dispatch
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  
+  // Global state
   const { user } = useSelector((state) => state.auth);
   const { isLoading, isError, message } = useSelector((state) => state.auth);
 
@@ -20,10 +22,10 @@ const Home = () => {
     navigate("/"); //Navigates to login page
   };
 
+  // Hook to navigate to login page is user is not logged in
   useEffect(() => {
     if (isError) {
-      // eslint-disable-next-line no-undef
-      console.log(message);
+      toast(message);
     }
 
     if (!user) {
@@ -41,9 +43,9 @@ const Home = () => {
       <h2>Welcome to Stön Recipe Notes v0.3a</h2>
       <br></br>
       <button className="navbar--logout" onClick={onLogout}>
-            <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
-            Logout
-          </button>
+        <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
+        Logout
+      </button>
       <br></br>
     </div>
   );

@@ -1,4 +1,7 @@
 /* Navigation Component Styles */
+.nothing {
+  display: none;
+}
 
 .navbar {
   display: flex;
