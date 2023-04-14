@@ -11,6 +11,7 @@
     "@dotenv/dotenv": "^0.1.0",
     "@types/nodemailer": "^6.4.7",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",

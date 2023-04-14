@@ -4,6 +4,7 @@ import connectToDb from "./utils/connectToDb";
 import log from "./utils/logger";
 import router from "./routes";
 import path = require("path");
+import compression from 'compression'
 
 dotenv.config({ path: "./.env" });
 
@@ -14,6 +15,9 @@ const cors = require('cors');
 app.use(cors({
     origin: '*'
 }));
+
+// Compression middleware
+app.use(compression())
 
 // Middleware for handling JSON requests, called before the router
 app.use(express.json());

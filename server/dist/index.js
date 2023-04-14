@@ -9,6 +9,7 @@ const connectToDb_1 = __importDefault(require("./utils/connectToDb"));
 const logger_1 = __importDefault(require("./utils/logger"));
 const routes_1 = __importDefault(require("./routes"));
 const path = require("path");
+const compression_1 = __importDefault(require("compression"));
 dotenv_1.default.config({ path: "./.env" });
 const app = (0, express_1.default)();
 const port = process.env.PORT;
@@ -16,6 +17,8 @@ const cors = require('cors');
 app.use(cors({
     origin: '*'
 }));
+// Compression middleware
+app.use((0, compression_1.default)());
 // Middleware for handling JSON requests, called before the router
 app.use(express_1.default.json());
 // Express router
