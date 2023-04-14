@@ -6,18 +6,23 @@ import axios from "axios";
 import "./styles.css";
 import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import Footer from "../components/Footer";
+import { InView } from "react-intersection-observer";
 
 // For the sake of this codebase just pretend that "pizza" means "recipe"
 
 const ViewPizzas = () => {
-  // Local state to store pizza data fetched from backend
+  // Local states to store pizza data fetched from backend, pagination, and search
   const [pizzaList, setPizzaList] = useState([]);
   const [refresh, setRefresh] = useState(false);
+  const [paginateAmount, setPaginateAmount] = useState(6);
+  const [searchFilter, setSearchFilter] = useState("");
 
   // Global state form redux store
   const { pizza, isError, isLoading } = useSelector((state) => state.pizza);
   const { user } = useSelector((state) => state.auth);
 
+  // Initialize navigate
   const navigate = useNavigate();
 
   // Hook to kick you back to login if you aren't authenticated
@@ -28,6 +33,7 @@ const ViewPizzas = () => {
 
     if (!user) {
       navigate("/");
+      toast("Please login to see recipes.");
     }
   }, [user, navigate, isError]);
 
@@ -50,6 +56,37 @@ const ViewPizzas = () => {
       });
   }, [isLoading, pizza, refresh, setRefresh]);
 
+  // Pagination Function
+  const paginate = (inputArray, amount) => {
+    let paginationArray = inputArray.slice(0, amount);
+    return paginationArray;
+  };
+
+  const handlePaginate = () => {
+    let newAmount = paginateAmount + 3;
+    setPaginateAmount(newAmount);
+  };
+
+  // Input handler for search form
+  const onChange = (e) => {
+    setSearchFilter(e.target.value.toLowerCase());
+  };
+
+  // Search Function
+  const search = (inputArray, searchFilter) => {
+    let outputArray = [];
+
+    if (searchFilter.length > 0) {
+      for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i].pizzaName.toLowerCase().includes(searchFilter))
+          outputArray.push(inputArray[i]);
+      }
+      return outputArray;
+    } else {
+      return inputArray;
+    }
+  };
+
   // Return JSX -----------------------------------------------
 
   if (isLoading) {
@@ -65,6 +102,7 @@ const ViewPizzas = () => {
           {/* Recipe search form */}
           <form autocomplete="off">
             <input
+              onChange={onChange}
               className="pizzas--search"
               placeholder="Search for recipes."
             ></input>
@@ -73,7 +111,7 @@ const ViewPizzas = () => {
         <div className="pizzas--container">
           {/* Recipe components mapped and rendered */}
           <div className="pizzas--Box">
-            {pizzaList.map((pizzaCard) => (
+            {paginate(search(pizzaList, searchFilter), paginateAmount).map((pizzaCard) => (
               <div>
                 <Pizza
                   refresh={refresh}
@@ -85,6 +123,9 @@ const ViewPizzas = () => {
             ))}
           </div>
         </div>
+        <InView onChange={(inView) => handlePaginate()}>
+          <Footer />
+        </InView>
       </div>
     );
   }
