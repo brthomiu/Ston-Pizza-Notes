@@ -24,6 +24,7 @@ const Like = (props) => {
     toast("You no longer love this recipe.", { duration: 2000 });
   };
 
+  // Return JSX -----------------------------------------------
   // Conditionally renders the heart depending on if user has the recipe liked or not
   // Why waste 3kb on a heart icon when you can copy and paste 100 lines of CSS and tweak it? /s
   if (!props.likers.includes(user._id)) {

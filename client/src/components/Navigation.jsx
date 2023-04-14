@@ -7,9 +7,10 @@ import { FaUserAlt, FaBook } from "react-icons/fa";
 // Navigation bar component
 
 const Navigation = () => {
-
   // Global user state
   const { user } = useSelector((state) => state.auth);
+
+  // Return JSX -----------------------------------------------
 
   if (!user) {
     return (
@@ -44,11 +45,11 @@ const Navigation = () => {
           </Link>
 
           <Link to="/Profile">
-          <button className="navbar--register">
-            <FaUserAlt style={{ marginRight: ".25rem" }} />
-            {user.name}
-          </button>
-        </Link>
+            <button className="navbar--register">
+              <FaUserAlt style={{ marginRight: ".25rem" }} />
+              {user.name}
+            </button>
+          </Link>
         </nav>
 
         <img className="navbar--logo" src={logo} alt="Logo" />

@@ -67,12 +67,12 @@ const Register = () => {
     }
   };
 
-  // Return the spinner if state is loading
+  // Return JSX -----------------------------------------------
+
   if (isLoading) {
     return <Spinner />;
   }
 
-  // Otherwise return registration section
   return (
     <div>
       <section className="form">

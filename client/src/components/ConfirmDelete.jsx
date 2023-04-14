@@ -15,6 +15,8 @@ const ConfirmDelete = (props) => {
     toast("Recipe deleted.");
   };
 
+  // Return JSX -----------------------------------------------
+
   if (!props.showConfirmation) {
     return <div className="nothing"></div>;
   } else

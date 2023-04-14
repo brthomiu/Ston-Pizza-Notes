@@ -58,12 +58,12 @@ const Login = () => {
     dispatch(login(userData));
   };
 
-  // Return the spinner if state is loading
+  // Return JSX -----------------------------------------------
+
   if (isLoading) {
     return <Spinner />;
   }
 
-  // Otherwise return login section
   return (
     <div>
       <section className="form">

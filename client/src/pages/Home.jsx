@@ -37,6 +37,8 @@ const Home = () => {
     return <Spinner />;
   }
 
+  // Return JSX -----------------------------------------------
+
   return (
     <div>
       <h1>Hello, {user.name}.</h1>

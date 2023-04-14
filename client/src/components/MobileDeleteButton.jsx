@@ -4,6 +4,7 @@
 import { BsTrashFill } from "react-icons/bs";
 
 const MobileDeleteButton = (props) => {
+  // Return JSX -----------------------------------------------
   if (props.user.name !== props.owner) {
     return <div className="nothing"></div>;
   } else {

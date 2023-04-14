@@ -104,20 +104,15 @@ const Pizza = (props) => {
       });
   };
 
-  // Return JSX Component
+  // Return JSX -----------------------------------------------
 
   return (
     <>
       <Modal
-        _id={props._id}
         refresh={props.refresh}
-        likers={props.likers}
+        pizza={props.pizza}
         setRefresh={props.setRefresh}
         deletePizza={deletePizza}
-        pizzaName={props.pizzaName}
-        owner={props.owner}
-        ingredients={props.ingredients}
-        recipe={props.recipe}
         setModalOpen={setModalOpen}
         modalOpen={modalOpen}
         likePizza={likePizza}
@@ -125,10 +120,10 @@ const Pizza = (props) => {
       />
       <div className="pizza">
         <span className="pizza--title">
-          <h1>{previewRecipe(props.pizzaName, 22)}</h1>
+          <h1>{previewRecipe(props.pizza.pizzaName, 22)}</h1>
           <div className="pizza--title-row">
             <p>Made by:</p>
-            <p className="pizza--title-name">{props.owner}</p>
+            <p className="pizza--title-name">{props.pizza.owner}</p>
           </div>
         </span>
 
@@ -136,21 +131,21 @@ const Pizza = (props) => {
           <h2>Ingredients:</h2>
         </span>
         <span className="pizza--ingredients">
-          {previewIngredients(props.ingredients).map((ingredient) => {
+          {previewIngredients(props.pizza.ingredients).map((ingredient) => {
             return <p className="pizza--ingredient">{ingredient}</p>;
           })}
         </span>
         <span className="pizza--row">
-          <p>{previewRecipe(props.recipe, 199)}</p>
+          <p>{previewRecipe(props.pizza.recipe, 199)}</p>
         </span>
 
         <span className="pizza--bottom-buttons">
           <div className="pizza--like">
             <Like
-              _id={props._id}
+              pizza={props.pizza}
               refresh={props.refresh}
               setRefresh={props.setRefresh}
-              likers={props.likers}
+              likers={props.pizza.likers}
               likePizza={likePizza}
             />
           </div>

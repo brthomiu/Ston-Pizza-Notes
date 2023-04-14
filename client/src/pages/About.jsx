@@ -1,6 +1,8 @@
 import "./styles.css";
 
 const About = () => {
+  // Return JSX -----------------------------------------------
+
   return (
     <div>
       <h2>Welcome to Stön Recipe Notes v0.3a</h2>

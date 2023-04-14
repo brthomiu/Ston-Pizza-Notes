@@ -36,6 +36,7 @@ const ViewPizzas = () => {
     if (isError) {
       throw new Error("Error fetching pizza data.");
     }
+
     axios({
       method: "get",
       url: "/api/pizzas",
@@ -43,10 +44,13 @@ const ViewPizzas = () => {
       .then(function (response) {
         setPizzaList(response.data);
       })
+
       .catch((error) => {
         throw new Error(`Axios error:${error}`);
       });
   }, [isLoading, pizza, refresh, setRefresh]);
+
+  // Return JSX -----------------------------------------------
 
   if (isLoading) {
     return <Spinner />;
@@ -59,28 +63,23 @@ const ViewPizzas = () => {
             <button className="containerButton">New Recipe</button>
           </Link>
           {/* Recipe search form */}
-          {/* <form autocomplete="off">
+          <form autocomplete="off">
             <input
               className="pizzas--search"
               placeholder="Search for recipes."
             ></input>
-          </form> */}
+          </form>
         </div>
         <div className="pizzas--container">
           {/* Recipe components mapped and rendered */}
           <div className="pizzas--Box">
-            {pizzaList.map((pizza) => (
+            {pizzaList.map((pizzaCard) => (
               <div>
                 <Pizza
                   refresh={refresh}
                   setRefresh={setRefresh}
-                  key={pizza._id}
-                  likers={pizza.likers}
-                  _id={pizza._id}
-                  owner={pizza.owner}
-                  pizzaName={pizza.pizzaName}
-                  ingredients={pizza.ingredients}
-                  recipe={pizza.recipe}
+                  pizza={pizzaCard}
+                  key={pizzaCard._id}
                 />
               </div>
             ))}

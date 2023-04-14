@@ -63,7 +63,8 @@ const CreatePizzas = () => {
     dispatch(createNewPizza(pizzaData));
   };
 
-  // Return the spinner if state is loading
+  // Return JSX -----------------------------------------------
+
   if (isLoading) {
     return <Spinner />;
   }

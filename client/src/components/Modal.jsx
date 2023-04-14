@@ -32,6 +32,7 @@ const Modal = (props) => {
     setShowConfirmation(true);
   };
 
+  // Return JSX -----------------------------------------------
   // Conditionally renders only if modal state is open
   // State stored in parent component (Pizza)
 
@@ -45,7 +46,7 @@ const Modal = (props) => {
           <ConfirmDelete
             refresh={props.refresh}
             setRefresh={props.setRefresh}
-            _id={props._id}
+            _id={props.pizza._id}
             deletePizza={props.deletePizza}
             showConfirmation={showConfirmation}
             setShowConfirmation={setShowConfirmation}
@@ -54,10 +55,10 @@ const Modal = (props) => {
             {/* MOBILE ONLY - Like button with like counter */}
             <div className="modal--mobile-like">
               <Like
-                _id={props._id}
+                _id={props.pizza._id}
                 refresh={props.refresh}
                 setRefresh={props.setRefresh}
-                likers={props.likers}
+                likers={props.pizza.likers}
                 likePizza={props.likePizza}
               />
             </div>
@@ -67,7 +68,7 @@ const Modal = (props) => {
             {/* Hidden by media query unless on small display */}
             <MobileDeleteButton
               user={user}
-              owner={props.owner}
+              owner={props.pizza.owner}
               confirmDelete={confirmDelete}
             />
 
@@ -80,24 +81,25 @@ const Modal = (props) => {
             {/* Name of recipe */}
             <span className="modal--title">
               <br></br>
-              <h1>{props.pizzaName}</h1>
+              <h1>{props.pizza.pizzaName}</h1>
             </span>
 
             {/* Name of recipe owner */}
             <span className="modal--owner">
               <p>Made by:</p>
-              <p className="modal--name">{props.owner}</p>
+              <p className="modal--name">{props.pizza.owner}</p>
             </span>
 
             {/* Ingredients rendered from ingredient array on recipe object */}
             <IngredientCloud
+              pizza={props.pizza}
               capitalizeFirst={props.capitalizeFirst}
-              ingredients={props.ingredients}
+              ingredients={props.pizza.ingredients}
             />
 
             {/* Recipe body */}
             <span className="modal--recipe">
-              <p>{props.recipe}</p>
+              <p>{props.pizza.recipe}</p>
             </span>
 
             {/* Like and delete */}
@@ -106,13 +108,13 @@ const Modal = (props) => {
                 _id={props._id}
                 refresh={props.refresh}
                 setRefresh={props.setRefresh}
-                likers={props.likers}
+                likers={props.pizza.likers}
                 likePizza={props.likePizza}
               />
               <button onClick={() => closeModal()}>Close</button>
               <DeleteButton
                 user={user}
-                owner={props.owner}
+                owner={props.pizza.owner}
                 confirmDelete={confirmDelete}
               />
             </span>

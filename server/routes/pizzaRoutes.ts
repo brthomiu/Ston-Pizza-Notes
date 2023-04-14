@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.post("/api/pizzas", createPizza);
 
-router.get("/api/pizzas", getPizzas);
+router.get("/api/pizzas/", getPizzas);
 
 router.delete("/api/pizzas/:id", deletePizza);
 
