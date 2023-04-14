@@ -2,6 +2,8 @@
 // When the user likes a component their user ID is pushed to an array in the recipe object
 // If the user already has the function liked, their ID is sliced out of the array
 
+// For the sake of this codebase just pretend that "pizza" means "recipe"
+
 import { useSelector } from "react-redux";
 import "./styles.css";
 import toast from "react-hot-toast";

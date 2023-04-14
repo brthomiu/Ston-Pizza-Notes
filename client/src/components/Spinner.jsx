@@ -1,4 +1,4 @@
-// Loading spinner component
+// Loading spinner component - Not fully implemented yet
 
 function Spinner() {
   return (

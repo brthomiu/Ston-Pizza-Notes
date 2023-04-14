@@ -1,6 +1,8 @@
 // Modal overlay component to display full recipe information
 // Scrolling is disabled when modal is called
 
+// For the sake of this codebase just pretend that "pizza" means "recipe"
+
 /* global document */
 import { useState } from "react";
 import ConfirmDelete from "./ConfirmDelete";

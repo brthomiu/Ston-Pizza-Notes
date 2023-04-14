@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 // Modal for confirming deletion of a recipe
 // State held in parent component (Modal) and passed thru props
 
+// For the sake of this codebase just pretend that "pizza" means "recipe"
+
 const ConfirmDelete = (props) => {
   // Delete pizza function, also gives back scroll since the modal closes
   const deletePizza = () => {

@@ -1,5 +1,12 @@
 /* global document */
 
+// Main recipe component
+// Mapped from recipe documents in MongoDB
+// Rendered as preview cards on a grid on the ViewPizzas page component
+// Houses a model component that displays full recipe info when toggled
+
+// For the sake of this codebase just pretend that "pizza" means "recipe"
+
 import "./styles.css";
 import axios from "axios";
 import Modal from "./Modal";
