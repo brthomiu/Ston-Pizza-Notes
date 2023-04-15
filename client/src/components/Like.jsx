@@ -32,7 +32,12 @@ const Like = (props) => {
       <div
         className="pizza--like-container"
         onClick={() =>
-          handleLikeClick(props._id, user._id, props.refresh, props.setRefresh)
+          handleLikeClick(
+            props.pizza._id,
+            user._id,
+            props.refresh,
+            props.setRefresh
+          )
         }
       >
         <div className="pizza--like-heart-empty">
@@ -46,7 +51,7 @@ const Like = (props) => {
         className="pizza--like-container"
         onClick={() =>
           handleUnLikeClick(
-            props._id,
+            props.pizza._id,
             user._id,
             props.refresh,
             props.setRefresh

@@ -73,7 +73,7 @@ const ViewPizzas = () => {
   };
 
   // Search Function
-  const search = (inputArray, searchFilter) => {
+  const search = (inputArray, searchFilter, pizzaType) => {
     let outputArray = [];
 
     if (searchFilter.length > 0) {

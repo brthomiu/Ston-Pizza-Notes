@@ -50,6 +50,7 @@ const Modal = (props) => {
             deletePizza={props.deletePizza}
             showConfirmation={showConfirmation}
             setShowConfirmation={setShowConfirmation}
+            pizza={props.pizza}
           />
           <div className="modal--container">
             {/* MOBILE ONLY - Like button with like counter */}
@@ -60,6 +61,7 @@ const Modal = (props) => {
                 setRefresh={props.setRefresh}
                 likers={props.pizza.likers}
                 likePizza={props.likePizza}
+                pizza={props.pizza}
               />
             </div>
 
@@ -105,17 +107,19 @@ const Modal = (props) => {
             {/* Like and delete */}
             <span className="modal--buttons">
               <Like
-                _id={props._id}
+                _id={props.pizza._id}
                 refresh={props.refresh}
                 setRefresh={props.setRefresh}
                 likers={props.pizza.likers}
                 likePizza={props.likePizza}
+                pizza={props.pizza}
               />
               <button onClick={() => closeModal()}>Close</button>
               <DeleteButton
                 user={user}
                 owner={props.pizza.owner}
                 confirmDelete={confirmDelete}
+                pizza={props.pizza}
               />
             </span>
           </div>
