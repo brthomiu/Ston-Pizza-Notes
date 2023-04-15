@@ -8,6 +8,8 @@ import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import Footer from "../components/Footer";
 import { InView } from "react-intersection-observer";
+import { search, paginate } from "../features/helpers/search";
+import Selector from "../components/Selector";
 
 // For the sake of this codebase just pretend that "pizza" means "recipe"
 
@@ -17,6 +19,7 @@ const ViewPizzas = () => {
   const [refresh, setRefresh] = useState(false);
   const [paginateAmount, setPaginateAmount] = useState(6);
   const [searchFilter, setSearchFilter] = useState("");
+  const [searchSelector, setSearchSelector] = useState("pizzaName");
 
   // Global state form redux store
   const { pizza, isError, isLoading } = useSelector((state) => state.pizza);
@@ -54,14 +57,9 @@ const ViewPizzas = () => {
       .catch((error) => {
         throw new Error(`Axios error:${error}`);
       });
-  }, [isLoading, pizza, refresh, setRefresh]);
+  }, [isLoading, pizza, refresh, setRefresh, setSearchSelector]);
 
-  // Pagination Function
-  const paginate = (inputArray, amount) => {
-    let paginationArray = inputArray.slice(0, amount);
-    return paginationArray;
-  };
-
+  // Input handler for pagination
   const handlePaginate = () => {
     let newAmount = paginateAmount + 3;
     setPaginateAmount(newAmount);
@@ -70,21 +68,6 @@ const ViewPizzas = () => {
   // Input handler for search form
   const onChange = (e) => {
     setSearchFilter(e.target.value.toLowerCase());
-  };
-
-  // Search Function
-  const search = (inputArray, searchFilter, pizzaType) => {
-    let outputArray = [];
-
-    if (searchFilter.length > 0) {
-      for (let i = 0; i < inputArray.length; i++) {
-        if (inputArray[i].pizzaName.toLowerCase().includes(searchFilter))
-          outputArray.push(inputArray[i]);
-      }
-      return outputArray;
-    } else {
-      return inputArray;
-    }
   };
 
   // Return JSX -----------------------------------------------
@@ -99,19 +82,27 @@ const ViewPizzas = () => {
           <Link to="/Create">
             <button className="containerButton">New Recipe</button>
           </Link>
+
           {/* Recipe search form */}
-          <form autocomplete="off">
-            <input
-              onChange={onChange}
-              className="pizzas--search"
-              placeholder="Search for recipes."
-            ></input>
-          </form>
+          <div className="pizzas--search-container">
+            <Selector setSearchSelector={setSearchSelector} />
+
+            <form autocomplete="off">
+              <input
+                onChange={onChange}
+                className="pizzas--search"
+                placeholder="Search for recipes."
+              ></input>
+            </form>
+          </div>
         </div>
         <div className="pizzas--container">
           {/* Recipe components mapped and rendered */}
           <div className="pizzas--Box">
-            {paginate(search(pizzaList, searchFilter), paginateAmount).map((pizzaCard) => (
+            {paginate(
+              search(pizzaList, searchFilter, searchSelector),
+              paginateAmount
+            ).map((pizzaCard) => (
               <div>
                 <Pizza
                   refresh={refresh}

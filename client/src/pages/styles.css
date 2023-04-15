@@ -1,6 +1,6 @@
 .containerButton {
-  width: 16rem;
-  margin-bottom: 2.5rem;
+  width: 19rem;
+  margin-bottom: 2rem;
 }
 
 .pizzas--container {
@@ -9,27 +9,7 @@
   display: flex;
 }
 
-.pizzas--top {
-  display: flex;
-  flex-direction: rows;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.pizzas--search {
-  padding: 0.5rem;
-  width: 16rem;
-  border-radius: 0.5rem;
-}
-
 /* Input Form Styles */
-
-/* .form-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-} */
 
 .form {
   display: flex;
@@ -95,6 +75,27 @@
 
 /* View Pizza Page Styles */
 
+.search--selector-dropdown button {
+  font-size: small;
+  padding: 0.55rem;
+  font-weight: 500;
+  margin: 0 0.5rem 1rem;
+}
+
+.pizzas--search {
+  padding: 0.5rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  box-shadow: -0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.pizzas--search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: -2rem auto 2rem;
+}
+
 .pizzas--Box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -120,14 +121,13 @@
 
   .pizzas--top {
     flex-direction: column;
-    gap: 0rem;
   }
 
   .pizzas--search {
     padding: 0.5rem;
-    width: 16rem;
-    margin-bottom: 2rem;
-    margin-top: -1rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    box-shadow: -0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.2);
   }
 
   .form {

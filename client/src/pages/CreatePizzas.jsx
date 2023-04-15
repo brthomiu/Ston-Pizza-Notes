@@ -56,7 +56,7 @@ const CreatePizzas = () => {
     const pizzaData = {
       owner: userName,
       pizzaName,
-      ingredients: ingredients.split(","),
+      ingredients: ingredients.toLowerCase().split(","),
       recipe,
     };
 
