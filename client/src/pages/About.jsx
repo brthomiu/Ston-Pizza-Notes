@@ -5,7 +5,7 @@ const About = () => {
 
   return (
     <div>
-      <h2>Welcome to Stön Recipe Notes v0.3a</h2>
+      <h2>Welcome to Stön Recipe Notes v0.4a</h2>
       Stön Recipe Notes is a platform created to help cooks to develop and share
       new recipes.
       <br></br>

@@ -79,6 +79,7 @@ const Register = () => {
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <input
+              maxLength="64"
               autocomplete="off"
               type="text"
               className="login--form-control"
@@ -92,6 +93,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              maxLength="64"
               autocomplete="off"
               type="email"
               className="login--form-control"
@@ -105,6 +107,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              maxLength="32"
               autocomplete="off"
               type="password"
               className="login--form-control"
@@ -118,6 +121,7 @@ const Register = () => {
 
           <div className="form-group">
             <input
+              maxLength="32"
               autocomplete="off"
               type="password"
               className="login--form-control"

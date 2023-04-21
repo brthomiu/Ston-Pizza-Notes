@@ -42,8 +42,10 @@ const Home = () => {
   return (
     <div>
       <h1>Hello, {user.name}.</h1>
-      <h2>Welcome to Stön Recipe Notes v0.3a</h2>
+      <h2>Welcome to Stön Recipe Notes v0.4a</h2>
       <br></br>
+      <p>{user.description}</p>
+      <br></br><br></br>
       <button className="navbar--logout" onClick={onLogout}>
         <FaCaretSquareLeft style={{ marginRight: ".25rem" }} />
         Logout

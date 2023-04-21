@@ -65,6 +65,7 @@ exports.registerUser = (0, express_async_handler_1.default)((req, res) => __awai
             name: user.name,
             email: user.email,
             token: generateToken(user.name),
+            description: user.description
         });
     }
     else {

@@ -40,18 +40,22 @@ Axios is used to make API fetch requests to the backend.
 
 # Version Notes
 
-## Current version - 0.3a - 4/12/2023
+## Current Release - 0.4a - 4/15/2023
+
+  - Users can now search for recipes from the recipes page
+    - Ability to search by name, author, ingredients, or recipe
+
+## Version - 0.3a - 4/12/2023
 
  - Added ability for users to love recipes
     - Displays how many "loves" each recipe has
  - Added toast notifications for various success/error messages
  - Updated styles for a more consistent user experience
 
+
 ---
 
 ## Upcoming features - to be implemented soon
-
-- Add character limits for all input fields
 
 - Ability to add image(s) to recipe
     - Looking at Imagekit CDN
@@ -60,23 +64,19 @@ Axios is used to make API fetch requests to the backend.
 
 - Email account verification for new accounts
 
-- Sort and search for browsing recipes
-  - Search by name/user/ingredient
+- Sorting for recipes
   - Sort by rating
   - Show my recipes
-
-- Rating system
-  - Save name/ID of recipe and rating in user data
 
 - Settings page
   - Input to edit user profile
   - Delete account
 
 - Add user profiles
-  - Modal to display user profile
-  - Make all instances of usernames a link to open the modal
-  - Show created recipes on profile
-  - Show rated recipes on profile
+  - Let user set a profile description and picture
+  - Show user's recipes recipes on profile
+  - Show loved recipes on profile
+  - Add achievements and badges users can display on their profile
 
 - Implement unit tests for basic features
 
@@ -86,4 +86,4 @@ Axios is used to make API fetch requests to the backend.
 
 - Write up docs for the API
 
-- Add a share button to make the card symmetrical again
+- Add a "share" button to the recipes

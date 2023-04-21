@@ -55,6 +55,7 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       token: generateToken(user.name),
+      description: user.description
     });
   } else {
     res.status(400);

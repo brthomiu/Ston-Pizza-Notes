@@ -109,7 +109,7 @@ const CreatePizzas = () => {
           {/* Recipe body entry section */}
           <div className="form-group">
             <textarea
-              maxlength="3000"
+              maxlength="600"
               rows="5"
               cols="40"
               type="recipe"
