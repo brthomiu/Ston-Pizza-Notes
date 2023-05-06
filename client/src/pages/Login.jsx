@@ -65,7 +65,7 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <>
       <section className="form">
         <form onSubmit={onSubmit}>
           {/* Login email entry */}
@@ -108,7 +108,7 @@ const Login = () => {
           </div>
         </form>
       </section>
-    </div>
+    </>
   );
 };
 

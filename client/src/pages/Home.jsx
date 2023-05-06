@@ -40,7 +40,7 @@ const Home = () => {
   // Return JSX -----------------------------------------------
 
   return (
-    <div>
+    <>
       <h1>Hello, {user.name}.</h1>
       <h2>Welcome to Stön Recipe Notes v0.4a</h2>
       <br></br>
@@ -51,7 +51,7 @@ const Home = () => {
         Logout
       </button>
       <br></br>
-    </div>
+    </>
   );
 };
 

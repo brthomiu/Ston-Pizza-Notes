@@ -76,7 +76,7 @@ const ViewPizzas = () => {
     return <Spinner />;
   } else {
     return (
-      <div>
+      <>
         <div className="pizzas--top">
           {/* Create recipe button */}
           <Link to="/Create">
@@ -117,7 +117,7 @@ const ViewPizzas = () => {
         <InView onChange={(inView) => handlePaginate()}>
           <Footer />
         </InView>
-      </div>
+      </>
     );
   }
 };

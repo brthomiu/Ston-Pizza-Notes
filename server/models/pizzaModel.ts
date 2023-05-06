@@ -1,17 +1,24 @@
 import mongoose, { model } from "mongoose";
 const { Schema } = mongoose;
 
-// 1. Create an interface representing a document in MongoDB.
+// Create interfaces to represent document in MongoDB.
+
+interface IIngredient {
+  ingredient: string;
+  amount: number;
+  uom: string;
+}
+
 export interface IPizza {
   owner: string;
   pizzaName: string;
-  ingredients: string[];
+  ingredients: IIngredient[];
   recipe: string;
   likers: string[];
   image: string;
 }
 
-// 2. Create a Schema correspondinsg to the document interface.
+// Create a Schema correspondinsg to the document interface.
 export const pizzaSchema = new Schema<IPizza>({
   owner: { type: String, required: true },
   pizzaName: { type: String, required: true, unique: true },
@@ -21,5 +28,5 @@ export const pizzaSchema = new Schema<IPizza>({
   image: { type: String, required: false}
 });
 
-// 3. Create a Model.
+// Create a Model.
 export const Pizza = model<IPizza>("Pizza", pizzaSchema);

@@ -4,7 +4,7 @@ const IngredientCloud = (props) => {
   // Return JSX -----------------------------------------------
 
   return (
-    <div>
+    <>
       <span className="modal--row">
         <h2>Ingredients:</h2>
       </span>
@@ -17,7 +17,7 @@ const IngredientCloud = (props) => {
           );
         })}
       </span>
-    </div>
+    </>
   );
 };
 

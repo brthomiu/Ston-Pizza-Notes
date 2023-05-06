@@ -4,7 +4,7 @@ const About = () => {
   // Return JSX -----------------------------------------------
 
   return (
-    <div>
+    <>
       <h2>Welcome to Stön Recipe Notes v0.4a</h2>
       Stön Recipe Notes is a platform created to help cooks to develop and share
       new recipes.
@@ -18,7 +18,7 @@ const About = () => {
         <button>View the source code for this application on GitHub.</button>
       </a>
       <p>Made by Brad Thompson - 2023</p>
-    </div>
+    </>
   );
 };
 

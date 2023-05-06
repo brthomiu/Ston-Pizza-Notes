@@ -26,7 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pizza = exports.pizzaSchema = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const { Schema } = mongoose_1.default;
-// 2. Create a Schema correspondinsg to the document interface.
+// Create a Schema correspondinsg to the document interface.
 exports.pizzaSchema = new Schema({
     owner: { type: String, required: true },
     pizzaName: { type: String, required: true, unique: true },
@@ -35,5 +35,5 @@ exports.pizzaSchema = new Schema({
     likers: { type: [String], required: false },
     image: { type: String, required: false }
 });
-// 3. Create a Model.
+// Create a Model.
 exports.Pizza = (0, mongoose_1.model)("Pizza", exports.pizzaSchema);

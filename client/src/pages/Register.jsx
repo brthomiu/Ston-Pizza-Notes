@@ -74,7 +74,7 @@ const Register = () => {
   }
 
   return (
-    <div>
+    <>
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -139,7 +139,7 @@ const Register = () => {
           </div>
         </form>
       </section>
-    </div>
+    </>
   );
 };
 

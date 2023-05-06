@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
+import CreateIngredients from "../components/CreateIngredients";
 
 // For the sake of this codebase just pretend that "pizza" means "recipe"
 
@@ -71,11 +72,11 @@ const CreatePizzas = () => {
 
   // Otherwise return pizza creation section
   return (
-    <div>
-      <div>
+    <>
+      <>
         <h2>New Recipe</h2>
         <br></br>
-      </div>
+      </>
       <section className="form">
         <form autocomplete="off" onSubmit={onSubmit}>
           {/* Recipe name entry section */}
@@ -135,7 +136,7 @@ const CreatePizzas = () => {
           </div>
         </form>
       </section>
-    </div>
+    </>
   );
 };
 
